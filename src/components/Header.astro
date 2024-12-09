@@ -1,28 +1,41 @@
-<header>
-  <img src="" alt="logo" />
-  <nav>
+<article class="header-layout">
+  <div class="logo">
+    <img src="" alt="logo" />
+  </div>
+  <nav class="nav">
     <ul>
       <li>
-        <a href="webshop.astro">Webshop</a>
+        <a href="/webshop">Webshop</a>
       </li>
       <li>
-        <a href="about.astro">Om os</a>
+        <a href="/about">Om os</a>
       </li>
       <li>
-        <a href="kontakt.astro">Kontakt</a>
+        <a href="/kontakt">Kontakt</a>
       </li>
     </ul>
+  </nav>
+  <div class="icons">
     <img src="../public/images/basket.png" alt="" />
     <img src="../public/images/search.png" alt="" />
     <img src="../public/images/login.png" alt="" />
-  </nav>
-</header>
+  </div>
+</article>
 
 <style>
-  nav ul {
-    list-style: none;
+  .header-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
-  nav a {
+  .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
+  .nav a {
     text-decoration: none;
+    color: #1e1e1e;
+    font-size: 24px;
   }
 </style>

@@ -1,5 +1,8 @@
 *{
     background-color: #F5F4F1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 h1{
     font-family: fino-sans, sans-serif;
