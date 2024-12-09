@@ -1,8 +1,16 @@
 *{
-    background-color: #F5F4F1;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+header{
+    background-color: #F5F4F1;
+}
+main{
+    background-color: #F5F4F1;
+}
+footer{
+    background-color: #C3E4DD;
 }
 h1{
     font-family: fino-sans, sans-serif;

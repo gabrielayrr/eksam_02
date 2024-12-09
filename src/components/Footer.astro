@@ -34,15 +34,44 @@
 </article>
 
 <style>
+  .footer-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    justify-content: space-evenly;
+  }
   .footer-layout h1 {
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
     font-size: 24px;
     text-align: unset;
   }
   .footer-layout h2 {
     font-size: 24px;
     text-align: unset;
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 550;
   }
   .footer-layout p {
     font-size: 20px;
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  @media (max-width: 768px) {
+    .footer-layout {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px; /* Adjust spacing for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-layout {
+      grid-template-columns: 1fr; /* Single column for mobile */
+      gap: 10px;
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
   }
 </style>
