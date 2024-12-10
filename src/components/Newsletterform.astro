@@ -1,0 +1,59 @@
+<form class="newsletter-form">
+  <div class="input-group">
+    <input type="text" name="name" placeholder="Navn" required />
+    <input type="email" name="email" placeholder="E-mailaddresse" required />
+    <button type="submit" class="submit-button">TILMELD</button>
+  </div>
+  <label class="checkbox-group">
+    <input type="checkbox" name="subscribe" />
+    <span>Ja tak, jeg vil abonnere på nyhedsbrevet</span>
+  </label>
+</form>
+
+<style>
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .input-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .input-group input {
+    width: 358px;
+    height: 63px;
+    padding: 0.5rem 1rem;
+    border: 0.5px solid #1e1e1e;
+    border-radius: 36px;
+    font-size: 24px;
+  }
+  .checkbox-group {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .checkbox-group input {
+    margin-right: 0.5rem;
+  }
+  .submit-button {
+    background-color: #99040b;
+    color: #c3e4dd;
+    border: 0.5px solid #c3e4dd;
+    width: 267px;
+    height: 63px;
+    padding: 0.7rem 2rem;
+    border-radius: 36px;
+    font-size: 24px;
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+</style>
