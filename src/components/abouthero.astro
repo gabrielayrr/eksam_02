@@ -1,0 +1,111 @@
+
+
+    <div class="parallax-container">
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>OM OS</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Historien BAG BAKE MY DAY</h2>
+    </div>
+
+
+   <style>
+    /* Set the body and overall layout */
+body {
+    margin: 0;
+  
+}
+
+/* Container for the parallax effect */
+.parallax-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Hero section with the background image */
+.hero-section {
+    background-image: url('/aboutphotos/abouthero.webp'); /* Replace with your image URL */
+    background-attachment: fixed; /* This is the key to parallax effect */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; /* Ensure it takes full height of the viewport */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Content inside the hero section */
+.hero-content h1 {
+    font-family: fino-sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 90px;
+    text-align: center;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Add some regular content below */
+.content {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.content h2 {
+    font-family: fino-sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+}
+
+<style>
+/* General styles remain as defined */
+
+/* Adjust styles for devices with a max width of 768px (tablets and phones) */
+@media (max-width: 768px) {
+    .hero-section {
+        background-attachment: scroll; /* Disable parallax on mobile for better performance */
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .hero-content h1 {
+        font-size: 40px; /* Reduce font size */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .content h2 {
+        font-size: 36px; /* Adjust heading size */
+    }
+
+    
+}
+
+/* Adjust styles for very small devices with a max width of 480px (phones) */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 32px; /* Further reduce font size for very small screens */
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
+</style>
+
+
+   
