@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Leftsidemenu from "../components/Leftsidemenu.astro";
 ---
 
 <html lang="da">
@@ -26,6 +27,35 @@ import Footer from "../components/Footer.astro";
       <h2>ÅBNINGSTIDER</h2>
       <div class="openinghours-frontpage"></div>
       <h1>MENU</h1>
+      <img src="../public/images/islandske.png" alt="islandske snegle" />
+      <Leftsidemenu
+        header="29DKK"
+        text="Chokolade (v) Hindbær (v) Oreo(v) Saltkaramel (v) "
+      />
+      <img src="../public/images/cupkakes.png" alt="cupcakes" />
+      <Leftsidemenu
+        header="36DKK"
+        text="Faste varienter Vanilje blåbær passionfrugt (v) Double chokolade (v) Red velvet med flødeostcreme Chokoladekage med oreocreme (v). Sæson smage Pistachie vaniljekage med pistachie creme Biscoff vaniljekage med biscoff creme (v)"
+      />
+      <img src="../public/images/cookies.png" alt="cookies" />
+      <Leftsidemenu
+        header="40DKK"
+        text="Biscoff Lotus cookie med fyld af biscoff creme Pecan nut cookie med fyld af nougat"
+      />
+      <img src="../public/images/minikager.png" alt="mini kager" />
+      <Leftsidemenu
+        header="350,-DKK"
+        text="Chokoladekage med chokoladecreme og chokoladedråber Vaniljekage med hindbærcreme og tørrede hindbær Red velvet med flødeostcreme "
+      />
+      <img src="../public/images/savory.png" alt="savory" />
+      <Leftsidemenu
+        header="25,-DKK"
+        text="Fuldkorns croissants (v) /25DKK Islandske ostesløjfer (v)/42DKK Rugbrødsboller (v) Surdejsboller (v) Smurt med smør og ost / +14DKK Smurt med smørost og avacado /+24DKK"
+      />
+      <img src="../public/images/drikke.png" alt="drinks" />
+      <Leftsidemenu
+        text="Chai latte Turmeric latte Matcha latte Mynte latte Lavender/æble latte Caramel latte Hindbær latte Citron latte Sodavand"
+      />
     </main>
     <footer>
       <Footer />
