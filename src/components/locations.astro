@@ -1,0 +1,107 @@
+<section class="lokation1">
+    <div class="lokationphoto">
+        <img src="/images/amager.webp" alt="Amager Location">
+    </div>
+    <div class="lokationtekst">
+        <h3>BAKE MY DAY CAFÉ DR BYEN</h3>
+       <p> Amagerfælledvej 162,<br>
+        2300 København S <br>
+        Mandag-Lørdag: 10:00 - 18:00  <br>
+        Søndag: 10:00 - 17:00 <br>
+        Tlf. 91 96 18 02</p>
+</div>
+</section>
+
+<section class="lokation1">
+    <div class="lokationtekst">
+        <h3>BAKE MY DAY CAFÉ FISKETORVET </h3>
+      <p>Amagerfælledvej 162,<br>
+        2300 København S <br>
+        Mandag-Torsdag: 10:00 - 16:00 <br>
+        Fredag: 10:00 - 14:00 <br>
+        Weekend: Lukket <br>
+        Tlf. 52 78 15 73 <br>
+        </p>  
+         </div>
+    <div class="lokationphoto">
+        <img src="/images/fisketorvet.webp" alt="Cupcakes">
+    </div>
+    
+</section>
+
+<section class="lokation1">
+    <div class="lokationphoto">
+        <img src="/images/kunde.webp" alt="Cupcakes">
+    </div>
+    <div class="lokationtekst">
+        <h3>KUNDESERVICE</h3>
+        <p>Amagerfælledvej 162,<br>
+            2300 København S <br>
+            Mandag-Torsdag: 10:00 - 16:00 <br>
+            Fredag: 10:00 - 14:00 <br>
+            Weekend: Lukket <br>
+            Tlf. 52 78 15 73 <br>
+        </p>
+       
+         </div>
+</section>
+<style>
+
+.lokation1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ 
+    } 
+
+    .lokationtekst p{
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    }
+
+    .lokationtekst h3{
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    color: #99040B;
+    text-align: center;
+    }
+
+    .lokationtekst{
+        margin: 50px;
+        padding: 30px;
+    }
+
+    .lokationphoto
+    img
+    {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+    
+     }
+     @media (max-width: 768px) {
+    .lokation1 {
+        grid-template-columns: 1fr; /* Switch to single-column layout */
+        text-align: center; /* Center text and images */
+    }
+
+    .lokationphoto, .lokationtekst {
+        margin: 20px; /* Adjust margins for smaller screens */
+    }
+
+    .lokationtekst p {
+        font-size: 24px; /* Smaller font size for better readability */
+    }
+
+    .lokationtekst h3 {
+        font-size: 28px; /* Adjust heading size */
+    }
+    .lokationphoto {
+    order: -1;
+  }
+}
+</style>
