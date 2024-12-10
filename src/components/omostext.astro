@@ -1,0 +1,112 @@
+<section class="about1">
+ 
+    <div class="about-tekst">
+   
+    <p>Som kun 21 årig, flyttede Ynja fra Island til Danmark i januar 2017 for at studere på universitetet, som var hendes oprindelige plan. I stedet besluttede hun sig for at åbne en kagebutik. Her blev Bake my Day, som vi kender I dag grundlagt I december 2017 af Ynja Mist Aradóttir og Ester Ingvarsdóttir.
+    I første omgang havde Ynja ikke tanken om at åbne en kagebutik. I stedet for prøvede hun at leve af at holde udstillinger og sælge kunst både i Island og Danmark. Da en enkelmands kagevirksomhed ville lukke sin virksomhed, fik Ynja den enestående mulighed for at købe de resterende aktiver fra denne kagevirksomhed.
+     Hun synes, at det ville være synd, hvis det hårde arbejde, ikke blev brugt til noget. I forvejen har Ynja arbejdet med kager på Island.
+      Her har hun erfaring fra en lignende kagebutik, hvor hun var den første ansat, og var tæt med ejeren i de første år. 
+      Men med ingen anden erfaring, uddannelse og efter at havde boet i Danmark i nogle måneder tænkte hun derfor ”det har jeg aldrig prøvet, så det kan jeg sikkert godt!”.</p>
+    </div>
+    <div class="about-photo">
+        <img src="/aboutphotos/owner.webp" alt="owner portrait">
+    </div>
+    </section>
+
+    <section class="about2">
+        <div class="about-photo">
+            <img src="/aboutphotos/owner2.webp" alt="owner in café">
+        </div>
+        <div class="about-tekst">
+            <p>På trods af at Ynja hverken kunne forstå eller tale dansk, da hun flyttede til Danmark, begyndte hun alligevel at undersøge mulighederne.
+             Allerede efter ca. 2 måneder fra da hun fik idéen, underskrev hun lejekontrakten på Amager Boulevard 126, og fik sin mor, Ester Ingvarsdóttir, med på rejsen.
+              Hendes mor tog et lille lån i Island, og i januar 2018 begyndte Ynja på opsætningen af køkkenet i kælderen på Amager Boulevard, samt at dekorere den lille kagebutik på små 20 kvm. I februar 2018 fik hun de første bestillinger ud af huset. 
+              Med hjælp fra familien, Ynjas far og bror, som kom fra Island og hjalp med opsætningen, lykkedes det at åbne kagebutikken officielt den 1. marts 2018.</p>
+            </div>
+        </section>
+
+        <section class="about1">
+            <div class="about-tekst">
+            <p>​
+                Med næsten ingen kapital og på så kort tid, var det stærk gået, at kunne åbne kagebutikken, selv om den fra start ikke så ud, som Ynja gerne ville have. 
+                Med tiden og med de mange kreative indsats fra teamet, kom detaljerne på plads, men efter gode 4 år på Amager Boulevard var det så tid til at kigge i andre retninger, da produktionen var blevet alt for stor til de lille lokaler på 75 kvm. 
+                Efter De hårde år med Corona, tog Ynja en stor chance, som endte heldigvis med at være den bedste beslutning for Bake my Day. 
+                En kontrakt blev underskrevet. Vi flyttede i de store nye lokaler på 320 kvm på Amagerfælledvej 162, i slut 2021. 
+                Efter flytningen er Bake my Day på en spændende vækstrejse, og har endda planer om yderligere udvidelse snart. Selv om man ikke har mange ressourcer fra start, kan ting alligevel godt lade sig gøre, med mod, vilje og modstandsdygtighed.</p>
+            </div>
+            <div class="about-photo">
+                <img src="/aboutphotos/cafephoto.webp" alt="café">
+            </div>
+            </section>
+
+            <section class="about2">
+                <div class="about-photo">
+                    <img src="/aboutphotos/staff.webp" alt="Staff group photo">
+                </div>
+                <div class="about-tekst">
+                <p>​
+                    I dag består teamet i Bake my Day af 16 kreative sjæle. Vi har leveret kager til mange af Danmarks største virksomheder og kendte personer, samt en hel masse andre dejlige kunder. Nogle besøger vores café flere gange om ugen, og mange bestiller særlige fødselsdagskager år efter år. På kort tid, er vi blevet en af Københavns største bryllupskage leverandør, og er kendt for vores høje kvalitet og kunstneriske udtryk.
+                    Vi glæder os til alle de bestillinger og eventyr som fremtiden byder på.<br>
+                    Af hjertet TAK fordi du er en del af vores rejse.</p>
+                </div>
+                </section>
+
+
+<style>
+    .about1,
+    .about2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px;
+    padding: 50px;
+    }  
+    
+    .about-photo
+    img
+    {
+        max-width: 100%;
+        max-height: 600px;
+        border-radius: 10px;
+    
+     }
+
+    .about-tekst{
+        margin: 30px;
+        text-align: ;
+    }
+
+    @media screen and (max-width: 768px) {
+  /* Switch to Flexbox for easier reordering */
+  .about1,
+  .about2 {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    margin: 20px; /* Reduce margin */
+    padding: 20px; /* Reduce padding */
+  }
+
+  /* Ensure photo appears first */
+  .about-photo {
+    order: 1;
+  }
+
+  /* Ensure text appears after photo */
+  .about-tekst {
+    order: 2;
+    margin: 10px 0; /* Smaller vertical margins */
+    text-align: justify;
+  }
+
+  /* Reduce font size for text */
+  .about-tekst p {
+    font-size: 15px;
+    line-height: 1.5; /* Adjust line spacing for readability */
+  }
+
+  /* Adjust image size */
+  .about-photo img {
+    max-height: 300px; /* Smaller max height */
+  }
+}
+</style>
+    
