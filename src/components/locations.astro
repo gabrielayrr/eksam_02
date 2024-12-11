@@ -1,8 +1,9 @@
+</body>
 <section class="lokation1">
-    <div class="lokationphoto">
+    <div class="lokationphoto hidden">
         <img src="/images/amager.webp" alt="Amager Location">
     </div>
-    <div class="lokationtekst">
+    <div class="lokationtekst hidden">
         <h3>BAKE MY DAY CAFÉ DR BYEN</h3>
        <p> Amagerfælledvej 162,<br>
         2300 København S <br>
@@ -13,7 +14,7 @@
 </section>
 
 <section class="lokation1">
-    <div class="lokationtekst">
+    <div class="lokationtekst hidden">
         <h3>BAKE MY DAY CAFÉ FISKETORVET </h3>
       <p>Amagerfælledvej 162,<br>
         2300 København S <br>
@@ -23,17 +24,17 @@
         Tlf. 52 78 15 73 <br>
         </p>  
          </div>
-    <div class="lokationphoto">
+    <div class="lokationphoto hidden">
         <img src="/images/fisketorvet.webp" alt="Cupcakes">
     </div>
     
 </section>
 
 <section class="lokation1">
-    <div class="lokationphoto">
+    <div class="lokationphoto hidden">
         <img src="/images/kunde.webp" alt="Cupcakes">
     </div>
-    <div class="lokationtekst">
+    <div class="lokationtekst hidden">
         <h3>KUNDESERVICE</h3>
         <p>Amagerfælledvej 162,<br>
             2300 København S <br>
@@ -45,8 +46,23 @@
        
          </div>
 </section>
+<script type="module" src="/src/scripts/parallax.js" defer></script>
+</body>
 <style>
 
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+
+
+/* Visible state */
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide the element up to its original position */
+}
 .lokation1{
     display: grid;
     grid-template-columns: 1fr 1fr;

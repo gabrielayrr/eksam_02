@@ -1,4 +1,5 @@
-<section class="staffinfo">
+</body>
+<section class="staffinfo hidden">
 
     <div class="staffcard">
     <img src="/aboutphotos/ynjastaff.webp" alt="Staff photo">
@@ -88,8 +89,23 @@
 
 
 </section>
-
+<script type="module" src="/src/scripts/parallax.js" defer></script>
+</body>
 <style>
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+
+
+/* Visible state */
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide the element up to its original position */
+}
     .staffcard img{
         max-width: 100%;
         max-height: 300px;
