@@ -1,0 +1,35 @@
+---
+
+// linkurinn af myndinni sem a ad vera med
+const src = Astro.props.src;     
+const ktext1 = Astro.props.ktext1;
+const ktext2 = Astro.props.ktext2;
+// linkurinn af sidunni thetta a ad fara a
+const href = Astro.props.href;
+---
+
+
+<article class="bcard">
+<img {src}="" alt="">
+<button class="bcardbutton">Tilfjø til kurv</button>
+<h4>{ktext1}</h4>
+<p>{ktext2}</p>
+
+
+</article>
+
+<style>
+.bcard{
+border-radius: 19px;
+background: rgba(195, 228, 221, 0.57);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+width: 307px;
+height: 412px;
+
+}
+.bcardbutton{
+    align-items: end;
+}
+
+    
+</style>
