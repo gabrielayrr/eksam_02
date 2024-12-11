@@ -25,46 +25,34 @@
 </section>
 <style>
 
- .contact-form{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 60px;
-        margin: 60px;
-    }
- 
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  font-size: 12px;
-  border: 3px solid #C3E4DD;
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px;
+    margin: 60px;
 }
 
-    .kontakt-tekst{
+.kontakt-tekst {
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-   margin: 30px;
+    margin: 30px;
     padding: 30px;
-    }
-
-    #responseMessage {
-  margin-top: 15px;
-  color: #28a745;
-  font-size: 8px;
 }
-    
 
-  
-  form {
+#responseMessage {
+    margin-top: 15px;
+    color: #28a745;
+    font-size: 8px;
+}
+
+form {
     max-width: 600px;
     margin: 0 auto;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 8px;
     font-family: adobe-caslon-pro, serif;
@@ -73,18 +61,28 @@
     font-size: 18px;
     text-align: justify;
     color: #99040B;
-   
-  }
-  input {
+}
+
+input {
     width: 100%;
     padding: 8px;
     margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 12px;
-    border: 3px solid #C3E4DD; 
+    border: 3px solid #C3E4DD;
+}
 
-  }
-  button {
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 12px;
+    border: 3px solid #C3E4DD;
+}
+
+button {
     padding: 5px 50px;
     background-color: #99040B;
     color: #C3E4DD;
@@ -96,11 +94,42 @@
     font-weight: 400;
     font-size: 16px;
     transition: transform 0.3s ease;
-  }
-
+}
 
 button:hover {
-  transform: scale(1.1); /* Slightly larger */
+    transform: scale(1.1); /* Slightly larger */
 }
+
+/* Responsive Design - Mobile First */
+@media (max-width: 768px) {
+    .contact-form {
+        grid-template-columns: 1fr; /* Stack the form elements on top of each other */
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .kontakt-tekst {
+        font-size: 28px; /* Adjust text size for smaller screens */
+        margin: 15px;
+        padding: 15px;
+    }
+
+    label {
+        font-size: 16px; /* Smaller font size for labels */
+    }
+
+    input,
+    textarea {
+        padding: 12px; /* Increase padding for easier input on mobile */
+        font-size: 16px; /* Larger font size for readability */
+    }
+
+    button {
+        width: 100%; /* Make the button take up full width */
+        padding: 10px 0; /* Adjust button padding for mobile */
+        font-size: 18px; /* Increase font size for easier tapping */
+    }
+}
+
 
 </style>

@@ -95,19 +95,19 @@ Men ønsker du noget ekstremt, så udfordre os endelig. Vi står mere end klar t
     
 <style>
 
+/* Hidden state for the FAQ section */
 .hidden {
   opacity: 0;
   transform: translateY(80px);
   transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
-
-
 /* Visible state */
 .visible {
   opacity: 1;
   transform: translateY(0); /* Slide the element up to its original position */
 }
+
 .faq {
   max-width: 800px;
   margin: 0 auto;
@@ -120,7 +120,7 @@ Men ønsker du noget ekstremt, så udfordre os endelig. Vi står mere end klar t
 
 .faq-question {
   background-color: #F5F4F1;
-  color:  #99040B;;
+  color: #99040B;
   padding: 15px;
   text-align: left;
   width: 100%;
@@ -132,9 +132,8 @@ Men ønsker du noget ekstremt, så udfordre os endelig. Vi står mere end klar t
   justify-content: flex-start; /* Align the content to the left */
   align-items: center;
   font-family: adobe-caslon-pro, serif;
-    font-style: normal;
-    font-weight: 800;
- 
+  font-style: normal;
+  font-weight: 800;
 }
 
 .faq-question:hover {
@@ -142,44 +141,90 @@ Men ønsker du noget ekstremt, så udfordre os endelig. Vi står mere end klar t
 }
 
 .faq-toggle {
-  font-size: 20px;
-  color:  #99040B;;
+  font-size: 40px; /* Larger size by default */
+  color: #99040B;
   font-weight: bold;
   cursor: pointer;
-  margin-right: 10px; /* Adds space between the cross and the question text */
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
 }
+
+
+.faq-toggle:hover {
+  transform: scale(1.2);
+}
+
+
 
 .faq-answer {
   display: block;
   max-height: 0; /* Initially collapsed */
   overflow: hidden;
   padding: 0 10px;
-  background-color: #C3E4DD
-  border: 1px solid #ddd;
+  background-color:#F5F4F1;
+  border: 1px solid F5F4F1;
   margin-top: 5px;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
 }
 
 .faq-answer img {
-max-width: 100%;
-max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .faq-answer h3 {
   margin: 0;
   font-family: adobe-caslon-pro, serif;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
 }
-
 
 .faq-answer p {
   margin: 0;
   font-family: adobe-caslon-pro, serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .faq {
+    padding: 15px;
+  }
+
+  .faq-question {
+    font-size: 20px; /* Smaller font size for mobile */
+    padding: 12px; /* Reduced padding for mobile */
+  }
+
+  .faq-answer {
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+
+  .faq-toggle {
+    font-size: 18px; /* Adjust toggle icon size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 10px;
+  }
+
+  .faq-question {
+    font-size: 18px; /* Further reduce font size */
+    padding: 10px; /* Reduce padding */
+  }
+
+  .faq-answer {
+    font-size: 16px; /* Further reduce text size */
+  }
+
+  .faq-toggle {
+    font-size: 30px; /* Adjust toggle icon size further */
+  }
 }
 
 
