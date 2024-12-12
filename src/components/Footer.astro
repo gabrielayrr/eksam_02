@@ -36,19 +36,44 @@
     <a href="https://www.findsmiley.dk/1391012" target="_blank">
       <p>Smiley raport</p>
   </a>
+  
     <a href="https://www.facebook.com/BakeMyDayCopenhagen/">
-    <img src="../images/facebook.png" alt="facebook logo" />
+    <img src="../images/facebook.png" class="facebook" alt="facebook logo" />
   </a>
  <a href="https://www.tiktok.com/@ynja.bakemyday">
-    <img src="../images/tiktok.png" alt="tiktok logo" />
+    <img src="../images/tiktok.png" class="tiktok" alt="tiktok logo" />
   </a>
  <a href="https://www.instagram.com/bakemydaycph/?hl=da">
-    <img src="../images/instagram.png" alt="instagram logo" />
+    <img src="../images/instagram.png" class="instagram" alt="instagram logo" />
   </a>
+
   </div>
 </article>
 
 <style>
+
+ .facebook{
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+ }
+ .facebook:hover {
+  transform: scale(1.2);
+}
+
+.tiktok{
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+ }
+
+ .tiktok:hover {
+  transform: scale(1.2);
+}
+
+.instagram{
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+ }
+
+ .instagram:hover {
+  transform: scale(1.2);
+}
   .footer-layout {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
