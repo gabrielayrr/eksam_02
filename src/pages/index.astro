@@ -5,6 +5,7 @@ import Footer from "../components/Footer.astro";
 import Parallaxlogo from "../components/parallaxlogo.astro";
 import Leftsidemenu from "../components/Leftsidemenu.astro";
 import Newsletterform from "../components/Newsletterform.astro";
+import Menuitem from "../components/Menuitem.astro";
 ---
 
 <html lang="da">
@@ -28,45 +29,82 @@ import Newsletterform from "../components/Newsletterform.astro";
       <Header />
     </header>
     <main>
-      <Parallaxlogo/>
+      <div class="logo-frontpage">
+        <img src="/images/logoforside.png" alt="logo frontpage"/>
+      </div>
       <h1>Café</h1>
       <h2>ÅBNINGSTIDER</h2>
       <div class="openinghours-frontpage"></div>
       <h2>MENU</h2>
-      <img src="/images/islandske.png" alt="islandske snegle" />
-      <Leftsidemenu
-        header="36DKK"
-        text="Chokolade (v) Hindbær (v) Oreo (v) Saltkaramel (v) Månedens donut (v)"
-      />
-      <Leftsidemenu
-        header="29DKK"
-        text="Chokolade (v) Hindbær (v) Oreo(v) Saltkaramel (v) "
-      />
-      <img src="/images/donuts.png" alt="donuts" />
-      <img src="/images/cupkakes.png" alt="cupcakes" />
-      <Leftsidemenu
-        header="36DKK"
-        text="Faste varienter Vanilje blåbær passionfrugt (v) Double chokolade (v) Red velvet med flødeostcreme Chokoladekage med oreocreme (v). Sæson smage Pistachie vaniljekage med pistachie creme Biscoff vaniljekage med biscoff creme (v)"
-      />
-      <img src="/images/cookies.png" alt="cookies" />
-      <Leftsidemenu
-        header="40DKK"
-        text="Biscoff Lotus cookie med fyld af biscoff creme Pecan nut cookie med fyld af nougat"
-      />
-      <img src="/images/minikager.png" alt="mini kager" />
-      <Leftsidemenu
-        header="350,-DKK"
-        text="Chokoladekage med chokoladecreme og chokoladedråber Vaniljekage med hindbærcreme og tørrede hindbær Red velvet med flødeostcreme "
-      />
-      <img src="/images/savory.png" alt="savory" />
-      <Leftsidemenu
-        header="25,-DKK"
-        text="Fuldkorns croissants (v) /25DKK Islandske ostesløjfer (v)/42DKK Rugbrødsboller (v) Surdejsboller (v) Smurt med smør og ost / +14DKK Smurt med smørost og avacado /+24DKK"
-      />
-      <img src="/images/drikke.png" alt="drinks" />
-      <Leftsidemenu
-        text="Chai latte Turmeric latte Matcha latte Mynte latte Lavender/æble latte Caramel latte Hindbær latte Citron latte Sodavand"
-      />
+      <div class="Menulayout">
+        <Menuitem
+          imageSrc="/images/islandske.png"
+          name="snegle"
+          price="29"
+          description="Chokolade (v) Hindbær (v) Oreo (v) Saltkaramel (v)"
+        />
+        <Menuitem
+          name="Donuts"
+          price="36"
+          description="Chokolade (v) Hindbær (v) Oreo (v) Saltkaramel (v) Månedens donut (v)"
+          imageSrc="/images/donuts.png"
+        />
+        <Menuitem
+          imageSrc="/images/cupkakes.png"
+          name="cupcakes"
+          price="36"
+          description="write more"
+        />
+        <Menuitem
+          name="macarons"
+          price="18"
+          description="write"
+          imageSrc="/images/macarons.png"
+        />
+        <Menuitem
+          imageSrc="/images/cookies.png"
+          name="cookies"
+          price="40"
+          description="write more"
+        />
+        <Menuitem
+          name="brownies"
+          price="49"
+          description="write"
+          imageSrc="/images/brownies.png"
+        />
+        <Menuitem
+          imageSrc="/images/minikager.png"
+          name="mini kager"
+          price="350,-"
+          description="write more"
+        />
+        <Menuitem
+          name="andre treats"
+          price="25"
+          description="write"
+          imageSrc="/images/andretreats.png"
+        />
+        <Menuitem
+          imageSrc="/images/savory.png"
+          name="savory"
+          price="25,-"
+          description="write more"
+        />
+        <Menuitem
+          name="kaffe"
+          price="??"
+          description="write"
+          imageSrc="/images/kaffe.png"
+        />
+        <Menuitem
+          imageSrc="/images/drikke.png"
+          name="drinks"
+          price="??"
+          description="write more"
+        />
+      </div>
+
       <div class="instagramlogo">
         <a href="https://www.instagram.com/bakemydaycph/">
         <img src="/images/instagram.png" alt="insta logo" />
