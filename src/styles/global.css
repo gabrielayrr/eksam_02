@@ -46,10 +46,19 @@ p {
 .instagramgalleri {
   text-align: center;
 }
-.Menulayout{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 1200px;
+.Menulayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1200px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px; /* Adjust heading size */
+  }
+  h2 {
+    font-size: 30px; /* Adjust heading size */
+  }
 }
 /*About css*/
 
