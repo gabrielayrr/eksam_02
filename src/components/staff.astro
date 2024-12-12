@@ -1,4 +1,5 @@
 </body>
+<div class="staffinfo-container">
 <section class="staffinfo hidden">
 
     <div class="staffcard">
@@ -78,7 +79,7 @@
     <div class="staffcard">
             <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
             <h3>Franca<h3>
-                <p>Café medarbejder</p>
+                <p>Café medarbejder</p>  
     </div>
 
    <div class="staffcard">
@@ -89,6 +90,7 @@
 
 
 </section>
+</div>
 <script type="module" src="/scripts/parallax.js" defer></script>
 </body>
 <style>
@@ -106,6 +108,14 @@
   opacity: 1;
   transform: translateY(0); /* Slide the element up to its original position */
 }
+
+.staffinfo-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures the container fills the viewport height */
+    margin: 0; /* Removes any default margin */
+}
     .staffcard img{
         max-width: 100%;
         max-height: 300px;
@@ -113,29 +123,39 @@
         margin-bottom: 0;
     }
 
+  
     .staffcard h3 {
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 20px;
     color: #99040B;
-    margin-bottom: 5px; /* Reduce the margin between heading and paragraph */
+    margin-bottom: 2px; /* Reduce the margin further */
 }
+
 
    
 .staffcard p {
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
+    color:black;
+    line-height: 1.0;
 }
 
-.staffinfo{
-     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 50px;
-    padding: 50px;
-}
+.staffinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 15px;
+    margin: 0; 
+    padding: 30px;
+  
+
+} 
+
+
+
 
 @media (max-width: 1200px) {
     .staffinfo {
@@ -158,11 +178,11 @@
     }
 
     .staffcard h3 {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 18px; /* Adjust font size for smaller screens */
     }
 
     .staffcard p {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 15px; /* Adjust font size for smaller screens */
     }
 }  
     
