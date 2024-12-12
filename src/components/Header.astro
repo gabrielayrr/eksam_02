@@ -4,6 +4,7 @@
     <img src="/images/logoheader.png" alt="logo" />
   </a>
   </div>
+  <section class="link-content">
   <nav class="nav">
     <ul>
       <li>
@@ -22,50 +23,79 @@
     <img src="/images/search.png" class="search" alt="" />
     <img src="/images/login.png" class="login" alt="" />
   </div>
+</section>
 </article>
 
 <style>
-.basket{
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
-
-.basket:hover {
-  transform: scale(1.2);
-}
-
-.search{
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
-
-.search:hover {
-  transform: scale(1.2);
-}
-
-.login{
-  transition: transform 0.3s ease; /* Smooth transition for scaling */
-}
-
-.login:hover {
-  transform: scale(1.2);
-}
-
-
-  .header-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .basket{
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    padding: 5px;
   }
-  .nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  
+  .basket:hover {
+    transform: scale(1.2);
   }
-  .nav a {
-    text-decoration: none;
-    color: #1e1e1e;
-    font-size: 24px;
-    font-family: fino-sans, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+  
+  .search{
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    padding: 5px;
   }
-</style>
+  
+  .search:hover {
+    transform: scale(1.2);
+  }
+  
+  .login{
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    padding: 5px;
+  }
+  
+  .login:hover {
+    transform: scale(1.2);
+  }
+  
+  .logo{
+    padding: 20px;
+  }
+
+  .icons img {
+  width: 35px; /* Set a uniform width */
+  height: 35px; /* Set a uniform height */
+  object-fit: contain; /* Ensure the images maintain aspect ratio */
+  display: inline-block; /* Keep them in a horizontal line */
+  margin: 0 5px; /* Add spacing between the images */
+  vertical-align: middle; /* Align the images to the middle of the line */
+}
+
+
+  
+    .header-layout {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  
+    .nav ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+    }
+
+    .link-content{
+      display: flex;
+      flex: left;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #1e1e1e;
+      font-size: 24px;
+      font-family: fino-sans, sans-serif;
+      font-style: normal;
+      font-weight: 400;
+    }
+  
+    .nav a:hover{
+      text-decoration: underline;
+    }
+  </style> 

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Parallaxlogo from "../components/parallaxlogo.astro";
 import Leftsidemenu from "../components/Leftsidemenu.astro";
 import Newsletterform from "../components/Newsletterform.astro";
 ---
@@ -27,9 +28,7 @@ import Newsletterform from "../components/Newsletterform.astro";
       <Header />
     </header>
     <main>
-      <div class="logo-frontpage">
-        <img src="/images/logoforside.png" alt="logo frontpage"/>
-      </div>
+      <Parallaxlogo/>
       <h1>Café</h1>
       <h2>ÅBNINGSTIDER</h2>
       <div class="openinghours-frontpage"></div>

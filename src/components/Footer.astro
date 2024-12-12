@@ -36,7 +36,7 @@
     <a href="https://www.findsmiley.dk/1391012" target="_blank">
       <p>Smiley raport</p>
   </a>
-  
+  <div class="socialmedia">
     <a href="https://www.facebook.com/BakeMyDayCopenhagen/">
     <img src="../images/facebook.png" class="facebook" alt="facebook logo" />
   </a>
@@ -46,12 +46,21 @@
  <a href="https://www.instagram.com/bakemydaycph/?hl=da">
     <img src="../images/instagram.png" class="instagram" alt="instagram logo" />
   </a>
-
+</div>
   </div>
 </article>
 
 <style>
 
+
+.socialmedia img {
+  width: 50px; /* Set a uniform width */
+  height: 50px; /* Set a uniform height */
+  object-fit: contain; /* Ensure the images maintain aspect ratio */
+  display: inline-block; /* Keep them in a horizontal line */
+  margin: 0 5px; /* Add spacing between the images */
+  vertical-align: middle; /* Align the images to the middle of the line */
+}
  .facebook{
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
  }
