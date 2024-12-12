@@ -3,7 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Newsletterform from "../components/Newsletterform.astro";
-import Menu from "../components/Menu.astro";
+import Menuitem from "../components/Menuitem.astro";
 ---
 
 <html lang="da">
@@ -28,7 +28,75 @@ import Menu from "../components/Menu.astro";
       <h2>ÅBNINGSTIDER</h2>
       <div class="openinghours-frontpage"></div>
       <h2>MENU</h2>
-      <Menu />
+      <div class="Menulayout">
+        <Menuitem
+          imageSrc="/images/islandske.png"
+          name="snegle"
+          price="29"
+          description="Chokolade (v) Hindbær (v) Oreo (v) Saltkaramel (v)"
+        />
+        <Menuitem
+          name="Donuts"
+          price="36"
+          description="Chokolade (v) Hindbær (v) Oreo (v) Saltkaramel (v) Månedens donut (v)"
+          imageSrc="/images/donuts.png"
+        />
+        <Menuitem
+          imageSrc="/images/cupkakes.png"
+          name="cupcakes"
+          price="36"
+          description="write more"
+        />
+        <Menuitem
+          name="macarons"
+          price="18"
+          description="write"
+          imageSrc="/images/macarons.png"
+        />
+        <Menuitem
+          imageSrc="/images/cookies.png"
+          name="cookies"
+          price="40"
+          description="write more"
+        />
+        <Menuitem
+          name="brownies"
+          price="49"
+          description="write"
+          imageSrc="/images/brownies.png"
+        />
+        <Menuitem
+          imageSrc="/images/minikager.png"
+          name="mini kager"
+          price="350,-"
+          description="write more"
+        />
+        <Menuitem
+          name="andre treats"
+          price="25"
+          description="write"
+          imageSrc="/images/andretreats.png"
+        />
+        <Menuitem
+          imageSrc="/images/savory.png"
+          name="savory"
+          price="25,-"
+          description="write more"
+        />
+        <Menuitem
+          name="kaffe"
+          price="??"
+          description="write"
+          imageSrc="/images/kaffe.png"
+        />
+        <Menuitem
+          imageSrc="/images/drikke.png"
+          name="drinks"
+          price="??"
+          description="write more"
+        />
+      </div>
+
       <div class="instagramlogo">
         <img src="../public/images/instagram.png" alt="insta logo" />
       </div>

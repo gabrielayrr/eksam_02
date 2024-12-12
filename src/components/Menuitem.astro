@@ -1,0 +1,18 @@
+---
+const { name, price, description, imageSrc } = Astro.props;
+---
+
+<article
+  style="display : flex; align-items = center; gap: 10px; margin-bottom:20px;"
+>
+  <img src={imageSrc} alt={name} />
+  <div>
+    <strong
+      style="font-size: 40px; font-family: font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400; color : #99040B"
+      >{price}DKK</strong
+    >
+    <p style="font-size: 24px;">{description}</p>
+  </div>
+</article>
