@@ -18,13 +18,38 @@
     </ul>
   </nav>
   <div class="icons">
-    <img src="/images/basket.png" alt="" />
-    <img src="/images/search.png" alt="" />
-    <img src="/images/login.png" alt="" />
+    <img src="/images/basket.png" class="basket" alt="" />
+    <img src="/images/search.png" class="search" alt="" />
+    <img src="/images/login.png" class="login" alt="" />
   </div>
 </article>
 
 <style>
+.basket{
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.basket:hover {
+  transform: scale(1.2);
+}
+
+.search{
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.search:hover {
+  transform: scale(1.2);
+}
+
+.login{
+  transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.login:hover {
+  transform: scale(1.2);
+}
+
+
   .header-layout {
     display: flex;
     align-items: center;

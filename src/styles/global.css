@@ -1,45 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header, main, body{
-    background-color: #F5F4F1;
+header,
+main,
+body {
+  background-color: #f5f4f1;
 }
-footer{
-    background-color: #C3E4DD;
+footer {
+  background-color: #c3e4dd;
 }
 
-h1{
-    font-family: fino-sans, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 90px;
-    text-align: center;
+h1 {
+  font-family: fino-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 90px;
+  text-align: center;
 }
-h2{
-    font-family: fino-sans, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 60px;
-    text-align: center;
+h2 {
+  font-family: fino-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  text-align: center;
 }
-p{
-    font-family: adobe-caslon-pro, serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
+p {
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
 }
 
 /* Index css*/
-.logo-frontpage{
-   text-align: center;
+.logo-frontpage {
+  text-align: center;
 }
-.instagramlogo{
-    text-align: center;
+.instagramlogo {
+  text-align: center;
+  transition: transform 0.3s ease;
 }
-.instagramgalleri{
-    text-align: center;
+
+.instagramlogo:hover {
+  transform: scale(1.2);
+}
+.instagramgalleri {
+  text-align: center;
 }
 .Menulayout{
     display: grid;
