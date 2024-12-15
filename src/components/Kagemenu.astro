@@ -11,26 +11,37 @@
 
 <nav class="kage_menu">
     
-    <a class="kage_m" href="/#">KAGER</a>
-    <a class="kage_m" href="/#">TREATS</a>
-    <a class="kage_m" href="/#">SÆSON</a>
-    <a class="kage_m" href="/#">PAKKELØSNINGER</a>
-    <a class="kage_m" href="/#">KURSER</a>
+    <a class="kage_m" href="/bryllup">KAGER</a>
+    <a class="kage_m" href="/bryllup">TREATS</a>
+    <a class="kage_m" href="/bryllup">SÆSON</a>
+    <a class="kage_m" href="/bryllup">PAKKELØSNINGER</a>
+    <a class="kage_m" href="/bryllup">KURSER</a>
     
 </nav>
 
 <style>
-.kage_menu{
+.kage_menu {
     list-style: none;
-    text-align: center;
-    justify-content: space-between;
-    
+    display: flex; /* Use flexbox for easy spacing */
+    justify-content: center; /* Center the links horizontally */
+    gap: 50px; /* Add equal spacing between links */
+    padding: 10px 10px; /* Optional: Add padding around the entire menu */
 }
+
  .kage_m{
     text-decoration: none;
     color: black;
+    font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+}
    
- }
+
+
+ .kage_m:hover{
+      text-decoration: underline;
+    }
 
 
 
