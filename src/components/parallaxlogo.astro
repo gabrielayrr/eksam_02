@@ -1,10 +1,10 @@
 <section class="scroll-container">
-  <!-- The image -->
+
   <div class="scroll-section image-section">
     <img src="/images/logoforside.webp" alt="Forside Logo" class="fade-image" />
   </div>
 
-  <!-- The text -->
+
   <div class="scroll-section text-section1">
     <img src="/images/cherry.webp" alt="cherry image" class="cherry-photo1">
    <h1>
@@ -13,7 +13,7 @@
    <img src="/images/cherry.webp" alt="cherry image" class="cherry-photo2">
   </div>
 
-  <!-- The second text section (with more space) -->
+
   <div class="scroll-section text-section2">
     <div class="heading">
       <h1>Café</h1>
@@ -36,7 +36,7 @@
 <script src="/scripts/scroll.js" defer></script>
 
 <style>
-/* Section with more space */
+
 .text-section2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -57,7 +57,6 @@
   gap: 10px;
 }
 
-/* Highlighting 'KAGER' */
 .highlight {
   color: #99040B;
 }
@@ -150,38 +149,44 @@
 
 
 @media (max-width: 768px) {
-  /* Cherry images */
-  .cherry-photo1,
-  .cherry-photo2 {
-    max-width: 100px; /* Reduce image size on mobile */
+  .text-section2 {
+    grid-template-columns: 1fr 1fr; /* Keep two columns */
+    gap: 20px; /* Reduce the gap for smaller screens */
+    margin-top: 20vh; /* Reduced space between sections */
   }
 
-  /* Adjust image positioning for mobile */
-  .cherry-photo1 {
-    top: -60px; /* Reduce the vertical position */
-    right: 5%;
-  }
-
-  .cherry-photo2 {
-    bottom: -60px;
-    left: 5%;
-  }
-
-  /* Adjust scroll-container height for smaller screens */
-  .scroll-container {
-    height: 120vh; /* Adjust to fit better on mobile */
-  }
-
-  /* Adjust font size for smaller screens */
   .text-section1 h1 {
-    font-size: 30px; /* Smaller font size on mobile */
+    font-size: 40px; /* Reduce font size for small screens */
+    line-height: 1.2;
   }
 
-  /* Adjust margin-top on text to bring it closer to the image */
-  .text-section1 {
-    margin-top: 5vh;
+  .cherry-photo1, .cherry-photo2 {
+    max-width: 100px; /* Smaller cherry images on mobile */
+    position: absolute; /* Reset positioning for small screens */
+  }
+
+  .image-section {
+    height: auto; /* Adjust image section height for mobile */
+    margin-bottom: 20px;
+  }
+
+  .scroll-container {
+    height: auto; /* Adjust for mobile view */
+  }
+
+  /* For the scroll effect */
+  .scroll-section {
+    transform: translateY(0px); /* Remove initial offset for mobile */
+  }
+
+  .text-section2 .heading {
+    font-size: 24px; /* Adjust font size for headings */
+  }
+
+  .text-section2 p {
+    font-size: 14px; /* Adjust text size for paragraphs */
   }
 }
 
-  
+
 </style>
