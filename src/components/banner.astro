@@ -1,0 +1,51 @@
+
+<div class="banner">
+    <p class="banner-text">This is your banner text!</p>
+  </div>
+<style>
+  .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #C3E4DD; 
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
+}
+  
+.banner-text {
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    
+    /* Animation setup */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    display: inline-block; /* Needed for animation to work properly */
+    
+    /* Apply the scrolling animation */
+    animation: scrollText 10s linear infinite;
+  }
+
+  @keyframes scrollText {
+    0% {
+      transform: translateX(100%); /* Start from the right of the screen */
+    }
+    50% {
+      transform: translateX(-100%); /* Move to the left of the screen */
+    }
+    100% {
+      transform: translateX(100%); /* Reset to the right side */
+    }
+  }
+
+   /* Media query for mobile devices */
+   @media (max-width: 768px) {
+    .banner-text {
+      font-size: 16px; 
+      animation: scrollText 8s linear infinite; 
+    }
+  }
+</style>
