@@ -1,8 +1,10 @@
 ---
-const {src, alt, text} = Astro.props;
+const {image, header, text} = Astro.props;
 ---
 
 <article>
-    <img>{src, alt}</img>
-    
+    <img src={image} alt="Small cupcake" />
+    <p><b>{header}</b></p>
+    <p>{text}</p>
+
 </article>
