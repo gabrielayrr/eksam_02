@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Banner from "../components/banner.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Newsletterform from "../components/Newsletterform.astro";
@@ -12,7 +13,7 @@ import Parallaxlogo from "../components/parallaxlogo.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="src/styles/global.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css" />
     <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
@@ -39,12 +40,11 @@ import Parallaxlogo from "../components/parallaxlogo.astro";
   </head>
   <body>
     <header>
+      <Banner />
       <Header />
     </header>
     <main>
       <Parallaxlogo />
-      <h1>Café</h1>
-      <h2>ÅBNINGSTIDER</h2>
       <div class="openinghours-frontpage"></div>
       <h2>MENU</h2>
       <div class="Menulayout">
@@ -180,7 +180,7 @@ import Parallaxlogo from "../components/parallaxlogo.astro";
 
       <div class="instagramlogo">
         <a href="https://www.instagram.com/bakemydaycph/">
-          <img src="/images/instagram.png" alt="insta logo" />
+          <img src="/images/instagram.webp" alt="insta logo" />
         </a>
       </div>
       <h2>FIND OS PÅ INSTAGRAM</h2>

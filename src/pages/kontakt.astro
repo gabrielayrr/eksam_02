@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Banner from "../components/banner.astro";
 import Header from "../components/Header.astro";
 import Kontaktform from "../components/kontaktform.astro";
 import Locations from "../components/locations.astro";
@@ -13,7 +14,7 @@ import Footer from "../components/Footer.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="src/styles/global.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
     <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico">
@@ -26,6 +27,7 @@ import Footer from "../components/Footer.astro";
   </head>
   <body>
     <header>
+      <Banner />
       <Header />
     </header>
     <main>
