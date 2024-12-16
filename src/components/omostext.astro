@@ -7,13 +7,13 @@
     <p> I forvejen har Ynja arbejdet med kager på Island. Her har hun erfaring fra en lignende kagebutik, hvor hun var den første ansat, og var tæt med ejeren i de første år. Men med ingen anden erfaring, uddannelse og efter at havde boet i Danmark i nogle måneder tænkte hun derfor ”det har jeg aldrig prøvet, så det kan jeg sikkert godt!”.</p>
   </div>
     <div class="about-photo hidden">
-        <img src="/aboutphotos/owner.webp" alt="owner portrait">
+        <img src="/aboutphotos/owner.webp" alt="owner portrait" loading="lazy">
     </div>
     </section>
 
     <section class="about2">
       <div class="about-photo hidden">
-            <img src="/aboutphotos/owner2.webp" alt="owner in café">
+            <img src="/aboutphotos/owner2.webp" alt="owner in café" loading="lazy">
         </div>
         <div class="about-tekst hidden">
          <p>På trods af at Ynja hverken kunne forstå eller tale dansk, da hun flyttede til Danmark, begyndte hun alligevel at undersøge mulighederne. Allerede efter ca. 2 måneder fra da hun fik idéen, underskrev hun lejekontrakten på Amager Boulevard 126, og fik sin mor, Ester Ingvarsdóttir, med på rejsen. </p>
@@ -28,13 +28,13 @@
            <p>Efter flytningen er Bake my Day på en spændende vækstrejse, og har endda planer om yderligere udvidelse snart. Selv om man ikke har mange ressourcer fra start, kan ting alligevel godt lade sig gøre, med mod, vilje og modstandsdygtighed.</p>
             </div>
             <div class="about-photo hidden">
-                <img src="/aboutphotos/cafephoto.webp" alt="café">
+                <img src="/aboutphotos/cafephoto.webp" alt="café" loading="lazy">
             </div>
             </section>
 
             <section class="about2">
               <div class="about-photo hidden">
-                    <img src="/aboutphotos/staff.webp" alt="Staff group photo">
+                    <img src="/aboutphotos/staff.webp" alt="Staff group photo" loading="lazy">
                 </div>
                 <div class="about-tekst hidden">
                   <p>
@@ -78,11 +78,12 @@
     }  
     
     .about-photo
-    img
+  img
     {
-        max-width: 100%;
-        max-height: 600px;
-        border-radius: 10px;
+    width: 100%; /* Makes the image responsive to its container */
+    height: 600px;
+    border-radius: 10px;
+    object-fit: cover;
     
      }
 
