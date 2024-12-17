@@ -58,12 +58,11 @@ const data = await fetch(
       <h2>BRYLLUPSKAGER</h2>
 
       <section class="bryllupcards">
-        {
-          data.map((bryllupcard) => {
-            return <Bryllupcard data={bryllupcard} />;
-          })
-        }
-      </section>
+        {data.map((bryllupcard)=>{
+        return <Bryllupcard data ={bryllupcard}   />;
+        })}
+      </section>n
+
     </main>
     <footer>
       <Footer />
