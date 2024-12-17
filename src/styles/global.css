@@ -26,10 +26,20 @@ h2 {
   font-size: 60px;
   text-align: center;
 }
+h3 {
+  font-family: fino-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 8rem;
+}
+
 p {
   font-family: adobe-caslon-pro, serif;
   font-style: normal;
   font-weight: 400;
+  text-align: center;
   font-size: 24px;
 }
 
@@ -46,12 +56,11 @@ p {
 .instagramgalleri {
   text-align: center;
 }
-.Menulayout{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    padding: 0;
-    
+.Menulayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
