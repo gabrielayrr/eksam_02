@@ -17,6 +17,9 @@ const {image, header, text, position, name} = Astro.props;
     position: relative;
     width: 100%;
 }
+.spacer {
+    height: 100vh; /* Placeholder for spacing */
+}
 .card {
   background: #f5f4f130;
   border-radius: 8px;
@@ -93,3 +96,20 @@ const {image, header, text, position, name} = Astro.props;
 }
 
 </style>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".card");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.2, // Trigger, når 20% af kortet er synligt
+    });
+
+    cards.forEach((card) => observer.observe(card));
+});
+</script>
