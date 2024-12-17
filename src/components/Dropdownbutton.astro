@@ -1,0 +1,14 @@
+---
+// @ts-nocheck
+
+const { Størrelse, options } = Astro.props;
+---
+
+<div class="dropdown">
+  <label for="dropdown">{Størrelse}</label>
+  <select id="dropdown" name="dropdown">
+    {options.map((option) => (
+      <option value={option} key={option}>{option}</option>
+    ))}
+  </select>
+</div>
