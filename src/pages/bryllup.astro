@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Kagemenu from "../components/Kagemenu.astro";
 import Bryllupcard from "../components/Bryllupcard.astro";
+
 const data = await fetch(
   "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
   {
@@ -80,5 +81,6 @@ const data = await fetch(
     justify-content: space-between;
     justify-items: center;
     margin-top: 4rem;
+    margin: 2rem;
   }
 </style>
