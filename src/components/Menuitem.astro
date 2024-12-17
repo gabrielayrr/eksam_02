@@ -13,19 +13,18 @@ const { name, price, imageSrc, items = [] } = Astro.props;
   style="display : flex; flex-direction: column; align-items :center; text-align: center; gap: 10px; margin-bottom:20px;"
 >
   <img src={imageSrc} alt={name} />
-  <div>
-    <strong
-      style="font-size: 40px; font-family: font-family: adobe-caslon-pro, serif;
+
+  <strong
+    style="font-size: 40px; font-family: font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400; color : #99040B"
-      >{price}DKK</strong
-    >
-    <ul
-      style="list-style: none; font-size: 24px; font-family: adobe-caslon-pro, serif;
+    >{price}DKK</strong
+  >
+  <ul
+    style="list-style: none; font-size: 24px; font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400;"
-    >
-      {items.map((item: string) => <li>{item}</li>)}
-    </ul>
-  </div>
+  >
+    {items.map((item: string) => <li>{item}</li>)}
+  </ul>
 </article>

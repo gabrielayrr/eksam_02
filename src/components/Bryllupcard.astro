@@ -1,35 +1,75 @@
 ---
+const { data } = Astro.props;
 
-// linkurinn af myndinni sem a ad vera med
-const src = Astro.props.src;     
-const ktext1 = Astro.props.ktext1;
-const ktext2 = Astro.props.ktext2;
-// linkurinn af sidunni thetta a ad fara a
-const href = Astro.props.href;
 ---
 
+ <a href= {`bryllupcards/${data.slug}`}>
+ <div class="bcard">
+    <div class="upperc">
+<img class="bcardimg" src=`/images/${data.Img}`alt={data.Img}>
+</div>
+<div class="lowerc">
+    <div>
+<h3>{data.ktext1}</h3>
+</div>
+<div>
+<h4>{data.ktext2}</h4>
+</div>
+<div>
+<button class="bbutton">TILFJØ TIL KURV</button>
+</div>
+</div>
 
-<article class="bcard">
-<img {src}="" alt="">
-<button class="bcardbutton">Tilfjø til kurv</button>
-<h4>{ktext1}</h4>
-<p>{ktext2}</p>
-
-
-</article>
+</div>
+</a>
 
 <style>
-.bcard{
-border-radius: 19px;
-background: rgba(195, 228, 221, 0.57);
-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-width: 307px;
-height: 412px;
 
+.bcard{
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+    align-items:start;
 }
-.bcardbutton{
-    align-items: end;
+.bcardimg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    
 }
+.upperc{
+    padding: 2rem;
+    border-radius: 19px;
+    background: rgba(195, 228, 221, 0.57);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 307px;
+    height: 412px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+} 
+
+.lowerc{
+    gap: 1rem;
+    row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.bbutton{
+    display: inline-flex;
+min-width: 200px;
+padding: 15px 45px 12px 45px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 36px;
+border: 3px solid var(--secondary-colors-blue, #C3E4DD);
+    
+}
+
+
 
     
 </style>

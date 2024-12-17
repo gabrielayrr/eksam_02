@@ -1,0 +1,296 @@
+---
+// @ts-nocheck
+import "../../styles/global.css";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Kagemenu from "../../components/Kagemenu.astro";
+
+
+export async function getStaticPaths() {
+  const data = await fetch(
+    "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
+    {
+      method: "GET",
+      headers: {
+        apikey:
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlbnhnYWJ5ZWF1b2t3eXdvdmRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTc2MTksImV4cCI6MjA0OTQ5MzYxOX0.DuRoO_qLOHFUY-JsNcTAOzxDEHObSpKf47BEpclRKnQ",
+      },
+    }
+  ).then((reponse) => reponse.json());
+
+  return data.map((artist) => {
+    return {
+      params: { slug: artist.slug },
+      props: { data: artist }, // FIXED: Changed `myArtist` to `data`
+    };
+  });
+}
+
+const { data } = Astro.props; // FIXED: Changed `myData` to `data`
+console.log(data);
+---
+
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/styles/global.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
+    <title>Bake My Day</title>
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+    <main>
+      <Kagemenu />
+
+      <section>
+        <!-- vinstri/uppi -->
+
+       <div>
+            <!-- myndir -->
+              
+        <div>
+          <!-- carrousel -->
+          <div></div>
+          <!-- minni myndir -->
+          <div>
+            <!-- mynd preview -->
+            <div></div>
+              <!-- mynd preview -->
+            <div></div>
+          </div>
+        </div>
+            <!-- texti -->
+            
+        <div></div>
+       </div>
+
+       <!-- hægri/nidri -->
+       <div>
+        <!-- titel og upplysingar -->
+        <div></div>
+        <!-- buttons -->
+        <div></div>
+        <!-- allergier -->
+        <div></div>
+        <!-- add to order -->
+        <div></div>
+       </div>
+      </section>
+
+      <section class="singleview" >
+          <div class="titelsinglev">
+          <h2>{data.ktext1}</h2>
+          <h3>{data.ktext2}</h3>
+          </div>
+          <div class="singlevcards">
+          <div class="singlevcard">
+          <img class="bigsinglevimg" src={`/images/${data.Img}`} alt={data.Img}>
+          </div>
+          <div class="minicards">
+          <div class="minicard">
+          <img class="smallsinglevimg1" src={`/images/${data.Img}`} alt={data.Img}>
+          </div>
+          <div class="minicard">
+          <img class="smallsinglevimg2" src={`/images/${data.Img}`} alt={data.Img}>
+          </div>
+          </div>
+          </div>
+
+          <!-- JAVASCRIPT FOR THE TEXT IF WE LIKE THAT INSTEAD -->
+
+          <!-- <div class="text-singlev" id="textSinglev">
+          <p class="text" id="text">
+           Vores Festkage med pressede blomster er en æstetisk fornøjelse, der forener naturens skønhed med en lækker smagsoplevelse. Kagen er omhyggeligt dekoreret med nøje udvalgte pressede blomster, der tilføjer en unik og naturlig elegance til enhver festlig lejlighed.
+          <span class="dots">...</span>
+           <span class="more-text"> Vores dedikerede konditorer smører kagen op med en skøn vaniljesmørcreme, der skaber den perfekte base for både udseende og smag.
+
+            Bemærk venligst, at på grund af blomsternes naturlige variation kan udseendet af blomsterdekorationen variere fra kage til kage. Dette bidrager til hver kages unikke karakter og skaber en autentisk følelse af håndværk og individualitet,men de kommer altid til at have det lidt mere "vilde" look.
+
+            Uanset om det er til en fødselsdag, bryllup eller enhver anden festlig lejlighed, vil vores Festkage med pressede blomster være et smukt og velsmagende centrum for din begivenhed.Vegan info: Alle smage undtaget Red velvet kan laves vegansk/plantebaseret. Husk at skrive i kommentarfeltet i næste skridt hvis kagen ønskes vegansk.
+
+            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</span>
+  </p>
+</div> -->
+          
+<div class="text-singlev">
+  <span class="visible-text">Vores Festkage med pressede blomster er en æstetisk fornøjelse, der forener naturens skønhed med en lækker smagsoplevelse. Kagen er omhyggeligt dekoreret med nøje udvalgte pressede blomster, der tilføjer en unik og naturlig elegance til enhver festlig lejlighed.</span>
+  <span class="dots">...</span>
+  <span class="more-text"> Vores dedikerede konditorer smører kagen op med en skøn vaniljesmørcreme, der skaber den perfekte base for både udseende og smag.
+
+            Bemærk venligst, at på grund af blomsternes naturlige variation kan udseendet af blomsterdekorationen variere fra kage til kage. Dette bidrager til hver kages unikke karakter og skaber en autentisk følelse af håndværk og individualitet,men de kommer altid til at have det lidt mere "vilde" look.
+
+            Uanset om det er til en fødselsdag, bryllup eller enhver anden festlig lejlighed, vil vores Festkage med pressede blomster være et smukt og velsmagende centrum for din begivenhed.Vegan info: Alle smage undtaget Red velvet kan laves vegansk/plantebaseret. Husk at skrive i kommentarfeltet i næste skridt hvis kagen ønskes vegansk.
+
+            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</span>
+</div>
+
+
+          <divd class="opplyssinglev">
+          <h3>Størrelse</h3>
+          
+          <h3>Smag</h3>
+          
+          <h3>Antal</h3>
+           </div>
+          <div class="brnsinglev">
+            <div class="singlevbtns">
+              <div>
+          <button>TILFØJ TIL KURV</button>
+          </div>
+          <div>
+          <button>KØB NU</button>
+          <div/>
+          </div>
+          </div>
+          
+    </section>
+  <style>
+
+
+/* CARDS */
+
+  /* Cards layout */
+.singleview{
+  display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.singlevcards{
+   display: flex;
+   gap: 2rem;
+   flex-direction: column;
+}
+
+.minicards{
+display: flex;
+column-gap: 1rem;
+
+}
+
+/* Making images on cards the right size */
+.bigsinglevimg{
+   width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.smallsinglevimg1{
+ width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.smallsinglevimg2{
+ width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+/* Cards background */
+.singlevcard{
+  width: 257px;
+height: 305px;
+border-radius: 19px;
+background: rgba(195, 228, 221, 0.57);
+}
+
+.minicard{
+  width: 67px;
+height: 73px;
+border-radius: 10px;
+background: rgba(195, 228, 221, 0.57);
+}
+
+
+/* TEXT */
+
+
+/* text about the cakes small to big */
+.more-text {
+    display: none; /* Hide extra text by default */
+  }
+
+  .text-singlev:hover .more-text {
+    display: inline; /* Show the hidden text on hover */
+  }
+
+  .text-singlev:hover .dots {
+    display: none; /* Hide the dots on hover */
+  }
+
+  .text-singlev {
+    cursor: pointer; /* Show a pointer cursor to indicate interactivity */
+    /* text-align: justify;   we need to have this on in the global css */
+  }
+
+  .singlevbtns{
+     display: inline-flex;
+min-width: 200px;
+padding: 15px 45px 12px 45px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 36px;
+border: 3px solid var(--secondary-colors-blue, #C3E4DD);
+    
+
+  }
+
+
+/* FOR JAVASCRIPT TEXT SMALLER AND THE ... AND BIGGER */
+/* 
+.text-singlev {
+  max-width: 600px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  cursor: pointer; 
+}
+
+.text {
+  line-height: 1.6;
+}
+
+.dots {
+  color: #555;
+}
+
+.more-text {
+  display: none; 
+} */
+
+
+  </style>
+
+  <script>
+// THE JAVASCRIPT FOR TEXT SMALLER AND THEN BIGGER
+
+// document.getElementById("textSinglev")?.addEventListener("click", function () {
+//   const dots = document.querySelector(".dots") as HTMLElement;
+//   const moreText = document.querySelector(".more-text") as HTMLElement;
+
+//   if (moreText.style.display === "none" || !moreText.style.display) {
+//     dots.style.display = "none"; // Hide the dots
+//     moreText.style.display = "inline"; // Show the hidden text
+//   } else {
+//     dots.style.display = "inline"; // Show the dots
+//     moreText.style.display = "none"; // Hide the additional text
+//   }
+// });
+
+
+  </script>
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>
