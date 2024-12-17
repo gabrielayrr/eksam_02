@@ -1,6 +1,7 @@
 ---
-const {image, header, text, position} = Astro.props;
+const {image, header, text, position, name} = Astro.props;
 ---
+
 
 <article class={`card ${position}`}>
     <img src={image} alt="Small cupcake" />
@@ -12,7 +13,9 @@ const {image, header, text, position} = Astro.props;
   <style>
 
 .cupcakecards{
-    
+
+    position: relative;
+    width: 100%;
 }
 .card {
   background: #f5f4f130;
@@ -22,6 +25,15 @@ const {image, header, text, position} = Astro.props;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  transform: scale(0.8) translateY(100px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+    color: #333;
+    z-index: 1;
   
 }
 
@@ -29,6 +41,7 @@ const {image, header, text, position} = Astro.props;
   align-self: flex-start;
   margin-left: 2rem;
   width: 40rem;
+  margin-top: 0,1rem;
 }
 
 .right {
@@ -37,9 +50,46 @@ const {image, header, text, position} = Astro.props;
   width: 40rem; /* Sikrer passende bredde */
 }
 
+/* Animations */
+.card .card1 {
+    animation: reveal 1s ease-in-out forwards;
+    animation-delay: 0.2s;
+}
+
+.card .card2 {
+    animation: reveal 1s ease-in-out forwards;
+    animation-delay: 0.6s;
+}
+
+.card .card3 {
+    animation: reveal 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+.card .card4 {
+    animation: reveal 1s ease-in-out forwards;
+    animation-delay: 1.4s;
+}
+
+@keyframes reveal {
+    0% {
+        transform: scale(0.8) translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
  .card img{
-    width: 5rem;
+    width: 10rem;
     align-self: center;
+    margin-bottom: :0;
  }
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 </style>
