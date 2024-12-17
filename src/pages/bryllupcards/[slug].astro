@@ -4,7 +4,9 @@ import "../../styles/global.css";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Kagemenu from "../../components/Kagemenu.astro";
-
+import Dropdownbutton from "../../components/Dropdownbutton.astro";
+const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
+const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
 
 export async function getStaticPaths() {
   const data = await fetch(
@@ -130,12 +132,14 @@ console.log(data);
 </div>
 
 
-          <divd class="opplyssinglev">
-          <h3>Størrelse</h3>
-          
-          <h3>Smag</h3>
-          
-          <h3>Antal</h3>
+          <divd class="opplyssinglev">   
+     <h3>Størrelse</h3>
+    <!-- Dropdown for Cake Flavors -->
+    <Dropdownbutton options={Størrelse} />
+    <h3>Smag</h3>
+    <!-- Dropdown for Cake Sizes -->
+    <Dropdownbutton options={Smag} />
+<h3>Antal</h3>
            </div>
           <div class="brnsinglev">
             <div class="singlevbtns">
@@ -241,9 +245,7 @@ align-items: center;
 gap: 10px;
 border-radius: 36px;
 border: 3px solid var(--secondary-colors-blue, #C3E4DD);
-    
-
-  }
+    }
 
 
 /* FOR JAVASCRIPT TEXT SMALLER AND THE ... AND BIGGER */
