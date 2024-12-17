@@ -5,6 +5,7 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Kagemenu from "../../components/Kagemenu.astro";
 import Dropdownbutton from "../../components/Dropdownbutton.astro";
+
 const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
 const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
 let count = 0;
@@ -132,7 +133,7 @@ console.log(data);
 </div>
 
       <!-- DROPDOWN -->
-  <divd class="opplyssinglev">   
+  <div class="opplyssinglev">   
      <h3>Størrelse</h3>
       <!-- Dropdown for Størrelse -->
      <Dropdownbutton options={Størrelse} />
@@ -147,18 +148,25 @@ console.log(data);
       <span id="counter">0</span>
       <span class="counter-button" id="increment">+</span>
     </div>
-    </div>
-           </div>
-          <div class="brnsinglev">
-            <div class="singlevbtns">
-              <div>
+  </div>
+          <div class="btnsinglev1">
           <button>TILFØJ TIL KURV</button>
-          </div>
-          <div>
+           <div/>
+           <div class="btnsinglev2">
           <button>KØB NU</button>
-          <div/>
-          </div>
-          </div>
+         </div>
+
+    <h3> & Allergier</h3>
+
+    
+    
+
+
+
+
+    <!-- ADD TO ORDER -->
+    
+         
           
     </section>
   <style>
@@ -243,18 +251,19 @@ background: rgba(195, 228, 221, 0.57);
     cursor: pointer; /
     text-align: justify;   
   }
+
+
 /* BUTTONS STYLING */
-  .singlevbtns{
-     display: inline-flex;
-min-width: 200px;
-padding: 15px 45px 12px 45px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 36px;
-border: 3px solid var(--secondary-colors-blue, #C3E4DD);
+  .btnsinglev1{
+     
+    }
+    .btnsinglev2{
+      border: 3px solid #C3E4DD;
     }
 
+
+
+    
     /* COUNTER STYLING */
   .counter-button{
 cursor: pointer; 
@@ -289,14 +298,7 @@ display: flex;
   display: none; 
 } */
 
-
   </style>
-
- 
-
-
-
- 
     </main>
     <footer>
       <Footer />
