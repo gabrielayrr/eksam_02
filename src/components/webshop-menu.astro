@@ -1,0 +1,167 @@
+<section class="webshopmenu1">
+
+<div class="webshopmenu-tekst1">
+    <h3>På vores webshop har vi gjort det let og intuitivt for dig at tilpasse og bestille dine varer, præcis som du ønsker det.</h3> 
+</div>
+<div class="webshopmenu-tekst2">
+    <h3>Dyk ned i vores kategorier, og lad dig blive inspireret:</h3>
+</div>
+</section>
+
+
+<section class="webshopmenu2">
+    <div class="webshopmenu-photo">
+      <a href="/bryllup">
+      <img src="/images/bryllup.webp" alt="Wedding cake">
+      <div class="photo-text">Bryllup</div>
+      <button class="photo-button">BESTIL HER</button>
+    </a>
+    </div>
+    <div class="webshopmenu-photo">
+      <a href="/bryllup">
+      <img src="/images/konfirmation.webp" alt="Konfirmation cake">
+      <div class="photo-text">KONFIRMATION</div>
+      <button class="photo-button">BESTIL HER</button>
+    </a>
+    </div>
+    <div class="webshopmenu-photo">
+      <a href="/bryllup">
+      <img src="/images/baptims.webp" alt="Baptism cake">
+      <div class="photo-text">BARNEDÅB</div>
+      <button class="photo-button">BESTIL HER</button>
+    </a>
+    </div>
+    <div class="webshopmenu-photo">
+      <a href="/bryllup">
+      <img src="/images/babyshower.webp" alt="Babyshower cake">
+      <div class="photo-text">BABYSHOWER</div>
+      <button class="photo-button">BESTIL HER</button>
+    </a>
+    </div>
+    <div class="webshopmenu-photo">
+      <a href="/bryllup">
+      <img src="/images/birthday.webp" alt="Birthday cake">
+      <div class="photo-text">FØDSELSDAG</div>
+      <button class="photo-button">BESTIL HER</button>
+    </a>
+    </div>
+    <div class="webshopmenu-photo">
+      <a href="/bryllup">
+      <img src="/images/fest.webp" alt="Fest cake">
+      <div class="photo-text">Fest</div>
+      <button class="photo-button">BESTIL HER</button>
+    </a>
+    </div>
+  </section>
+  
+  
+
+<style>
+
+
+  
+ .photo-button {
+  position: absolute;
+  top: 60%; /* Place the button below the text */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px 50px;
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #99040B; 
+  color: #c3e4dd;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.webshopmenu-photo:hover .photo-button {  
+  transform: translate(-50%, -40%) scale(1.2); /* Scale the button to 1.2x size */
+  transition: transform 0.3s ease; /* Smooth growth animation */
+}
+
+.webshopmenu2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    margin: 30px;
+    gap: 40px;
+}
+
+
+.webshopmenu-photo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+.webshopmenu-photo:hover img {
+  filter: blur(5px); /* Adjust the blur intensity */
+  transform: scale(1.05); /* Optional: slight zoom effect */
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.webshopmenu-photo:hover .photo-text {
+  font-weight: 600; /* Keep the text bold */
+}
+
+.photo-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-family: fino-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 60px;
+  text-align: center;
+
+}
+
+.webshopmenu2 img
+    {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 10px;
+      }
+
+    .webshopmenu-tekst1,
+    .webshopmenu-tekst2,
+    h3
+    {
+ font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+    }
+
+    .webshopmenu-tekst1{
+        padding: 40px;
+        margin: 40px;
+    }
+    
+  
+
+    @media screen and (max-width: 768px) {
+        .photo-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+
+    .webshopmenu2 {
+        grid-template-columns: 1fr; /* Switch to single-column layout */
+        text-align: center; /* Center text and images */
+    }
+  /* Ensure text appears after photo */
+  .photo-text {
+font-size: 40px;
+  }
+
+
+}

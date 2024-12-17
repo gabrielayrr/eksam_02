@@ -1,9 +1,11 @@
 ---
 import "../styles/global.css";
+import Banner from "../components/banner.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Leftsidemenu from "../components/Leftsidemenu.astro";
 import Newsletterform from "../components/Newsletterform.astro";
+import Menuitem from "../components/Menuitem.astro";
+import Parallaxlogo from "../components/parallaxlogo.astro";
 ---
 
 <html lang="da">
@@ -11,67 +13,185 @@ import Newsletterform from "../components/Newsletterform.astro";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="src/styles/global.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css" />
+    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
+
     <title>Bake My Day</title>
   </head>
   <body>
     <header>
+      <Banner />
       <Header />
     </header>
     <main>
-      <div class="logo-frontpage">
-        <img src="../public/images/logoforside.png" alt="logo frontpage" />
-      </div>
-      <h1>Café</h1>
-      <h2>ÅBNINGSTIDER</h2>
+      <Parallaxlogo />
       <div class="openinghours-frontpage"></div>
       <h2>MENU</h2>
-      <img src="../public/images/islandske.png" alt="islandske snegle" />
-      <Leftsidemenu
-        header="36DKK"
-        text="Chokolade (v) Hindbær (v) Oreo (v) Saltkaramel (v) Månedens donut (v)"
-      />
-      <Leftsidemenu
-        header="29DKK"
-        text="Chokolade (v) Hindbær (v) Oreo(v) Saltkaramel (v) "
-      />
-      <img src="../public/images/donuts.png" alt="donuts" />
-      <img src="../public/images/cupkakes.png" alt="cupcakes" />
-      <Leftsidemenu
-        header="36DKK"
-        text="Faste varienter Vanilje blåbær passionfrugt (v) Double chokolade (v) Red velvet med flødeostcreme Chokoladekage med oreocreme (v). Sæson smage Pistachie vaniljekage med pistachie creme Biscoff vaniljekage med biscoff creme (v)"
-      />
-      <img src="../public/images/cookies.png" alt="cookies" />
-      <Leftsidemenu
-        header="40DKK"
-        text="Biscoff Lotus cookie med fyld af biscoff creme Pecan nut cookie med fyld af nougat"
-      />
-      <img src="../public/images/minikager.png" alt="mini kager" />
-      <Leftsidemenu
-        header="350,-DKK"
-        text="Chokoladekage med chokoladecreme og chokoladedråber Vaniljekage med hindbærcreme og tørrede hindbær Red velvet med flødeostcreme "
-      />
-      <img src="../public/images/savory.png" alt="savory" />
-      <Leftsidemenu
-        header="25,-DKK"
-        text="Fuldkorns croissants (v) /25DKK Islandske ostesløjfer (v)/42DKK Rugbrødsboller (v) Surdejsboller (v) Smurt med smør og ost / +14DKK Smurt med smørost og avacado /+24DKK"
-      />
-      <img src="../public/images/drikke.png" alt="drinks" />
-      <Leftsidemenu
-        text="Chai latte Turmeric latte Matcha latte Mynte latte Lavender/æble latte Caramel latte Hindbær latte Citron latte Sodavand"
-      />
+      <div class="Menulayout">
+        <Menuitem
+          imageSrc="/images/snudar.png"
+          name="snegle"
+          price="29"
+          items={[
+            "Chokolade (v)",
+            "Hindbær (v)",
+            "Oreo (v)",
+            "Saltkaramel (v)",
+          ]}
+        />
+        <Menuitem
+          name="Donuts"
+          price="36"
+          items={[
+            "Chokolade (v)",
+            "Hindbær (v)",
+            "Oreo (v)",
+            "Saltkaramel (v)",
+            "Månedens donut (v)",
+          ]}
+          imageSrc="/images/kleinu.png"
+        />
+        <Menuitem
+          imageSrc="/images/cupkakes.png"
+          name="cupcakes"
+          price="36"
+          items={[
+            "FASTE VARIENTER",
+            "Vanilje blåbær passionfrugt (v)",
+            "Double chokolade (v)",
+            "Red velvet med flødeostecreme",
+            "Chokoladekage med oreocreme (v)",
+            "SÆSON SMAGE",
+            "Pistachie vaniljekage med pistachie creme",
+            "Biscoff vaniljekage med biscoff creme (v)",
+          ]}
+        />
+        <Menuitem
+          name="macarons"
+          price="18"
+          items={[
+            "chokolade (G)",
+            "Hindbær (G)",
+            "Hvid chokolade (G)",
+            "Saltkaramel (G)",
+            "Blåbær (G)",
+            "Pistachie (G)",
+          ]}
+          imageSrc="/images/makkaronur.png"
+        />
+        <Menuitem
+          imageSrc="/images/cookies.png"
+          name="cookies"
+          price="40"
+          items={[
+            "Biscoff Lotus cookie med fyld af biscoff creme",
+            "Pecan nut cookie med fyld af nougat",
+          ]}
+        />
+        <Menuitem
+          name="brownies"
+          price="49"
+          items={[
+            "Chokolade brownie med cornflakes og saltkaramel",
+            "Chokolade brownie med pekan nødder og saltkaramel)",
+          ]}
+          imageSrc="/images/brownies.png"
+        />
+        <Menuitem
+          imageSrc="/images/minikager.png"
+          name="mini kager"
+          price="350,-"
+          items={[
+            "Chokoladekage med chokoladecreme og chokoladedråber",
+            "Vaniljekage med hindbærecreme og tørrede hindbær",
+            "Red velvet med flødeostecreme",
+          ]}
+        />
+        <Menuitem
+          name="andre treats"
+          price="25"
+          items={["Cakepops", "Romkugler"]}
+          imageSrc="/images/andretreats.png"
+        />
+        <Menuitem
+          imageSrc="/images/savory.png"
+          name="savory"
+          price="25,-"
+          items={[
+            "Fuldkorns croissant (v) / 25DKK",
+            "Islandske ostesløfjer (v) / 42DKK",
+            "Rugbrødsboller (v)",
+            "Surdejsboller (v)",
+            "Smurt med smør og ost / +14DKK",
+            "Smurt med smørost og avacado / +24DKK",
+          ]}
+        />
+        <Menuitem
+          name="kaffe"
+          price="25"
+          items={[
+            "Americano",
+            "Latte",
+            "Cappuchino",
+            "Flat white",
+            "Espresso",
+            "Iskaffe",
+            "Varm chokolade / Mocha",
+          ]}
+          imageSrc="/images/kaffe.png"
+        />
+        <Menuitem
+          imageSrc="/images/drikke.png"
+          name="drinks"
+          price="20"
+          items={[
+            "Chai Latte",
+            "Turmeric Latte",
+            "Matcha Latte",
+            "Mynte Latte",
+            "Lavender/Æble Latte",
+            "Caramel Latte",
+            "Hindbær Latte",
+            "Citron Latte",
+            "Sodavand",
+          ]}
+        />
+      </div>
+
       <div class="instagramlogo">
-        <img src="../public/images/instagram.png" alt="insta logo" />
+        <a href="https://www.instagram.com/bakemydaycph/">
+          <img src="/images/instagram.webp" alt="insta logo" />
+        </a>
       </div>
       <h2>FIND OS PÅ INSTAGRAM</h2>
       <div class="instagramgalleri">
-        <img src="../public/images/galleri1.png" alt="" />
-        <img src="../public/images/galleri2.png" alt="" />
-        <img src="../public/images/galleri3.png" alt="" />
-        <img src="../public/images/galleri4.png" alt="" />
-        <img src="../public/images/galleri5.png" alt="" />
+        <a href="https://www.instagram.com/bakemydaycph/">
+          <img src="/images/galleri1.png" alt="" />
+          <img src="/images/galleri2.png" alt="" />
+          <img src="/images/galleri3.png" alt="" />
+          <img src="/images/galleri4.png" alt="" />
+          <img src="/images/galleri5.png" alt="" />
+        </a>
       </div>
       <h2>TILMELD DIG TIL BAKE MY NEWSLETTER</h2>
       <Newsletterform />

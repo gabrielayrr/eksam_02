@@ -1,0 +1,40 @@
+---
+const {image, header, text, position} = Astro.props;
+---
+
+<article class={`card ${position}`}>
+    <img src={image} alt="Small cupcake" />
+    <p><b>{header}</b></p>
+    <p>{text}</p>
+
+</article>
+
+  <style>
+.card {
+  background: #f5f4f130;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left {
+  align-self: flex-start;
+  margin-left: 2rem;
+  width: 40rem;
+}
+
+.right {
+  align-self: flex-end;
+  margin-right: 2rem;
+  width: 40rem; /* Sikrer passende bredde */
+}
+
+ .card img{
+    width: 5rem;
+    align-self: center;
+ }
+
+</style>

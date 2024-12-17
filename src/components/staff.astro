@@ -1,125 +1,165 @@
-<section class="staffinfo">
+</body>
+<div class="staffinfo-container">
+<section class="staffinfo hidden">
 
     <div class="staffcard">
-    <img src="/aboutphotos/ynjastaff.webp" alt="Staff photo">
+    <img src="/aboutphotos/ynjastaff.webp" alt="Staff photo"loading="lazy">
 <h3>Ynja Aradóttir</h3>
 <p>Founder, co-owner & CEO</p>
 </div>
 
     <div class="staffcard">
-         <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+         <img src="/aboutphotos/staffphoto.webp" alt="Staff photo" loading="lazy">
        <h3>Ditte Lisberg</h3>
             <p>Salg & service manager</p>
          </div>
 
     <div class="staffcard">
-          <img src="/aboutphotos/amaliestaff.webp" alt="Staff photo">
+          <img src="/aboutphotos/amaliestaff.webp" alt="Staff photo"loading="lazy">
        <h3>Amalie Petersen</h3>
             <p>Café manager</p>
     </div>
 
     <div class="staffcard">
-           <img src="/aboutphotos/aistestaff.webp" alt="Staff photo"> 
+           <img src="/aboutphotos/aistestaff.webp" alt="Staff photo" loading="lazy"> 
             <h3>Aiste Patackiene</h3>
             <p>Production manager</p>
           </div>
 
 <div class="staffcard">
-         <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+         <img src="/aboutphotos/staffphoto.webp" alt="Staff photo" loading="lazy">
         <h3>Ester Ingvarsdottir</h3>
         <p>Co-owner and CFO</p>
     </div>
 
     <div class="staffcard">
-           <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+           <img src="/aboutphotos/staffphoto.webp" alt="Staff photo"loading="lazy">
             <h3>Aziz Nabiyev</h3>
             <p>Art Manager</p>
           </div>
   
 <div class="staffcard">
-        <img src="/aboutphotos/olinelastaff.webp" alt="Staff photo">
+        <img src="/aboutphotos/olinelastaff.webp" alt="Staff photo" loading="lazy">
         <h3>Olinela D'altri</h3>
         <p>Kagedekoratør</p>
       </div>
 
     <div class="staffcard">
-        <img src="/aboutphotos/eloisestaff.webp" alt="Staff photo">
+        <img src="/aboutphotos/eloisestaff.webp" alt="Staff photo" loading="lazy">
         <h3>Eloïse Blaise</h3>
             <p>Konditor/bager</p>
     </div>
 
     <div class="staffcard">
-         <img src="/aboutphotos/barborastaff.webp" alt="Staff photo">
+         <img src="/aboutphotos/barborastaff.webp" alt="Staff photo" loading="lazy">
         <h3>Barbora Petesova
             </h3>
             <p>Kagedekoratør</p>
          </div>
 
     <div class="staffcard">
-        <img src="/aboutphotos/emilijastaff.webp" alt="Staff photo">
+        <img src="/aboutphotos/emilijastaff.webp" alt="Staff photo" loading="lazy">
         <h3>Emilija Masnikaite</h3>
             <p>Konditor/Bager</p>
     </div>
 
     <div class="staffcard">
-            <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+            <img src="/aboutphotos/staffphoto.webp" alt="Staff photo" loading="lazy">
             <h3>Caroline
             </h3>
             <p>Café medarbejder</p>
     </div>
 
     <div class="staffcard">
-      <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+      <img src="/aboutphotos/staffphoto.webp" alt="Staff photo" loading="lazy">
             <h3>Line</h3>
             <p>Café medarbejder</p>
     </div>
 
     <div class="staffcard">
-            <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+            <img src="/aboutphotos/staffphoto.webp" alt="Staff photo" loading="lazy">
             <h3>Franca<h3>
-                <p>Café medarbejder</p>
+                <p>Café medarbejder</p>  
     </div>
 
    <div class="staffcard">
-     <img src="/aboutphotos/staffphoto.webp" alt="Staff photo">
+     <img src="/aboutphotos/staffphoto.webp" alt="Staff photo" loading="lazy">
             <h3>Tanja</h3>
             <p>Café medarbejder</p>
         </div>
 
 
 </section>
-
+</div>
+<script type="module" src="/scripts/parallax.js" defer></script>
+</body>
 <style>
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+
+
+/* Visible state */
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide the element up to its original position */
+}
+
+.staffinfo-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    min-height: 100vh; /* Ensures the container fills the viewport height */
+    margin: 0; /* Removes any default margin */
+}
+
+.staffcard {
+  line-height: 1.4em;
+}
     .staffcard img{
         max-width: 100%;
         max-height: 300px;
+        object-fit: cover;
         border-radius: 10px;
         margin-bottom: 0;
     }
 
+  
     .staffcard h3 {
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 24px;
+    font-size: 20px;
     color: #99040B;
-    margin-bottom: 5px; /* Reduce the margin between heading and paragraph */
 }
+
 
    
 .staffcard p {
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
+    color:black;
+    line-height: 1.0;
 }
 
-.staffinfo{
-     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 50px;
-    padding: 50px;
+.staffinfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    margin: 0; 
+    padding: 30px;
+gap: 25px 15px;
 }
+  
+
+
+
+
 
 @media (max-width: 1200px) {
     .staffinfo {
@@ -138,16 +178,20 @@
         grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
         margin: 20px;
         padding: 20px;
+       gap:15px;
     }
 
     .staffcard h3 {
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 18px; /* Adjust font size for smaller screens */
     }
 
     .staffcard p {
-        font-size: 18px; /* Adjust font size for smaller screens */
+        font-size: 15px; /* Adjust font size for smaller screens */
     }
 }  
     
+
+
+
 
 </style>

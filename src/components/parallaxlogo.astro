@@ -1,0 +1,192 @@
+<section class="scroll-container">
+
+  <div class="scroll-section image-section">
+    <img src="/images/logoforside.webp" alt="Forside Logo" class="fade-image" />
+  </div>
+
+
+  <div class="scroll-section text-section1">
+    <img src="/images/cherry.webp" alt="cherry image" class="cherry-photo1">
+   <h1>
+      EN HELT SPECIEL DAG, MED VELSMAGENDE <br> OG KUNSTERISKE <span class="highlight">KAGER</span>
+   </h1>
+   <img src="/images/cherry.webp" alt="cherry image" class="cherry-photo2">
+  </div>
+
+
+  <div class="scroll-section text-section2">
+    <div class="heading">
+      <h1>Café</h1>
+    </div>
+    <div class="heading">
+      <h2>ÅBNINGSTIDER</h2>
+    </div>
+    <div>
+      <p><b>DR BYEN</b></p>
+      <p>Mandag - Lørdag : 10 - 18 <br>
+         Søndag : 10 - 17</p>
+    </div>
+    <div>
+      <p><b>FISKETORVET</b></p>
+      <p>Mandag - Søndag : 11 - 21</p>
+    </div>
+  </div>
+</section>
+
+<script src="/scripts/scroll.js" defer></script>
+
+<style>
+
+.text-section2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 30vh; /* Increased space between sections */
+}
+
+/* Heading style for the sections */
+.text-section2 .heading {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.text-section2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight {
+  color: #99040B;
+}
+
+/* Cherry image styles */
+.cherry-photo1 {
+  position: absolute;
+  top: -90px;
+  right: 10%;
+  max-width: 150px;
+  height: auto;
+}
+
+.cherry-photo2 {
+  position: absolute;
+  bottom: -90px;
+  left: 10%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* Scroll container styles */
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 250vh; /* Increased height for space and scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Section style */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(90px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Active class for when the section is visible */
+.scroll-section.active {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+/* Sticky image section */
+.image-section {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+/* Image fade style */
+.fade-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the first text section */
+.text-section1 {
+  margin-top: 10vh; /* Bring text closer to the image */
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.text-section1 h1 {
+  font-family: fino-sans, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 70px;
+  text-align: center;
+}
+
+/* Active class for text-section1 */
+.text-section1.active {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+/* Active class for text-section2 */
+.text-section2.active {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+
+@media (max-width: 768px) {
+  .text-section2 {
+    grid-template-columns: 1fr 1fr; /* Keep two columns */
+    gap: 20px; /* Reduce the gap for smaller screens */
+    margin-top: 20vh; /* Reduced space between sections */
+  }
+
+  .text-section1 h1 {
+    font-size: 40px; /* Reduce font size for small screens */
+    line-height: 1.2;
+  }
+
+  .cherry-photo1, .cherry-photo2 {
+    max-width: 100px; /* Smaller cherry images on mobile */
+    position: absolute; /* Reset positioning for small screens */
+  }
+
+  .image-section {
+    height: auto; /* Adjust image section height for mobile */
+    margin-bottom: 20px;
+  }
+
+  .scroll-container {
+    height: auto; /* Adjust for mobile view */
+  }
+
+  /* For the scroll effect */
+  .scroll-section {
+    transform: translateY(0px); /* Remove initial offset for mobile */
+  }
+
+  .text-section2 .heading {
+    font-size: 24px; /* Adjust font size for headings */
+  }
+
+  .text-section2 p {
+    font-size: 14px; /* Adjust text size for paragraphs */
+  }
+}
+
+
+</style>

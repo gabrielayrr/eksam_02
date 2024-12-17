@@ -1,9 +1,14 @@
 <article class="footer-layout">
   <div class="addresse">
     <h1>ADDRESSE</h1>
+    <a href="https://maps.app.goo.gl/76EpxSbkWfcWe1CQ6"target="_blank">
     <p>Amager Fælledvej 162, 2300 København S</p>
+  </a>
+  <a href="https://maps.app.goo.gl/vBbAtG2oMWpXZV62A"target="_blank">
     <p>Kalvebod Brygge 59, 1560 København</p>
-    <img src="../public/images/logofooter.png" alt="logo" />
+  </a>
+  
+    <img src="../images/logofooter.webp" alt="logo" />
   </div>
   <div class="openinghours">
     <h1>ÅBNINGSTIDER</h1>
@@ -25,15 +30,59 @@
   </div>
   <div class="information">
     <h1>INFORMATION</h1>
+    <a href="/kontakt#faq">
     <p>FAQ-Ofte stillede spørgsmål</p>
-    <p>Smiley report</p>
-    <img src="../public/images/facebook.png" alt="facebook logo" />
-    <img src="../public/images/tiktok.png" alt="tiktok logo" />
-    <img src="../public/images/instagram.png" alt="instagram logo" />
+  </a>
+    <a href="https://www.findsmiley.dk/1391012" target="_blank">
+      <p>Smiley raport</p>
+  </a>
+  <div class="socialmedia">
+    <a href="https://www.facebook.com/BakeMyDayCopenhagen/">
+    <img src="../images/facebook.webp" class="facebook" alt="facebook logo" />
+  </a>
+ <a href="https://www.tiktok.com/@ynja.bakemyday">
+    <img src="../images/tiktok.webp" class="tiktok" alt="tiktok logo" />
+  </a>
+ <a href="https://www.instagram.com/bakemydaycph/?hl=da">
+    <img src="../images/instagram.webp" class="instagram" alt="instagram logo" />
+  </a>
+</div>
   </div>
 </article>
 
 <style>
+
+
+.socialmedia img {
+  width: 50px; /* Set a uniform width */
+  height: 50px; /* Set a uniform height */
+  object-fit: contain; /* Ensure the images maintain aspect ratio */
+  display: inline-block; /* Keep them in a horizontal line */
+  margin: 0 5px; /* Add spacing between the images */
+  vertical-align: middle; /* Align the images to the middle of the line */
+}
+ .facebook{
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+ }
+ .facebook:hover {
+  transform: scale(1.2);
+}
+
+.tiktok{
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+ }
+
+ .tiktok:hover {
+  transform: scale(1.2);
+}
+
+.instagram{
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+ }
+
+ .instagram:hover {
+  transform: scale(1.2);
+}
   .footer-layout {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -60,6 +109,9 @@
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400;
+  }
+  .footer-layout a {
+   color: black;
   }
   .footer-layout > div {
     text-align: center;

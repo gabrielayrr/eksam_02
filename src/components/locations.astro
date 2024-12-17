@@ -1,8 +1,10 @@
+</body>
+
 <section class="lokation1">
-    <div class="lokationphoto">
-        <img src="/images/amager.webp" alt="Amager Location">
+<div class="lokationphoto hidden">
+        <img src="/images/amager.webp" alt="Amager Location"  loading="lazy">
     </div>
-    <div class="lokationtekst">
+    <div class="lokationtekst hidden">
         <h3>BAKE MY DAY CAFÉ DR BYEN</h3>
        <p> Amagerfælledvej 162,<br>
         2300 København S <br>
@@ -13,27 +15,25 @@
 </section>
 
 <section class="lokation1">
-    <div class="lokationtekst">
+    <div class="lokationtekst hidden">
         <h3>BAKE MY DAY CAFÉ FISKETORVET </h3>
-      <p>Amagerfælledvej 162,<br>
-        2300 København S <br>
-        Mandag-Torsdag: 10:00 - 16:00 <br>
-        Fredag: 10:00 - 14:00 <br>
-        Weekend: Lukket <br>
-        Tlf. 52 78 15 73 <br>
+      <p>Fisketorvet Kalvebod Brygge 59,<br>
+        1560 København V <br>
+        Mandag - Søndag: 11:00 - 21:00 <br>
+        Tlf. 24 96 02  22 <br>
         </p>  
          </div>
-    <div class="lokationphoto">
-        <img src="/images/fisketorvet.webp" alt="Cupcakes">
+    <div class="lokationphoto hidden">
+        <img src="/images/fisketorvet.webp" alt="Cupcakes"  loading="lazy">
     </div>
     
 </section>
 
 <section class="lokation1">
-    <div class="lokationphoto">
-        <img src="/images/kunde.webp" alt="Cupcakes">
+    <div class="lokationphoto hidden">
+        <img src="/images/kunde.webp" alt="Cupcakes"  loading="lazy">
     </div>
-    <div class="lokationtekst">
+    <div class="lokationtekst hidden">
         <h3>KUNDESERVICE</h3>
         <p>Amagerfælledvej 162,<br>
             2300 København S <br>
@@ -45,8 +45,23 @@
        
          </div>
 </section>
+<script type="module" src="/scripts/parallax.js" defer></script>
+</body>
 <style>
 
+.hidden {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+
+
+/* Visible state */
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Slide the element up to its original position */
+}
 .lokation1{
     display: grid;
     grid-template-columns: 1fr 1fr;
