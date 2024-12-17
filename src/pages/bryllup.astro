@@ -6,16 +6,16 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Kagemenu from "../components/Kagemenu.astro";
 import Bryllupcard from "../components/Bryllupcard.astro";
-const data = await fetch(
-  "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlbnhnYWJ5ZWF1b2t3eXdvdmRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTc2MTksImV4cCI6MjA0OTQ5MzYxOX0.DuRoO_qLOHFUY-JsNcTAOzxDEHObSpKf47BEpclRKnQ",
-    },
-  }
-).then((res) => res.json());
+const data = await fetch ("https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
+{
+method:"GET",
+headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlbnhnYWJ5ZWF1b2t3eXdvdmRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTc2MTksImV4cCI6MjA0OTQ5MzYxOX0.DuRoO_qLOHFUY-JsNcTAOzxDEHObSpKf47BEpclRKnQ"
+},
+}
+).then(res=>res.json());
+
+
 ---
 
 <html lang="da">
@@ -24,27 +24,13 @@ const data = await fetch(
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="src/styles/global.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css" />
-    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/favicons/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicons/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/favicons/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/favicons/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
+    <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/site.webmanifest">
 
     <title>Bake My Day</title>
   </head>
@@ -58,12 +44,13 @@ const data = await fetch(
       <h2>BRYLLUPSKAGER</h2>
 
       <section class="bryllupcards">
-        {
-          data.map((bryllupcard) => {
-            return <Bryllupcard data={bryllupcard} />;
-          })
-        }
+        {data.map((bryllupcard)=>{
+
+        return <Bryllupcard data ={bryllupcard} />;
+        })}
       </section>
+
+
     </main>
     <footer>
       <Footer />
@@ -72,14 +59,16 @@ const data = await fetch(
 </html>
 
 <style>
-  .bryllupcards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 2rem;
-    row-gap: 8rem;
-    justify-content: space-between;
-    justify-items: center;
+.bryllupcards{
+display: grid;
+grid-template-columns:  repeat(4, 1fr);;
+grid-template-rows: 1fr;
+column-gap: 2rem;
+row-gap: 8rem;
+justify-content: space-between;
+justify-items: center;
     margin-top: 4rem;
-  }
+}
+
+
 </style>
