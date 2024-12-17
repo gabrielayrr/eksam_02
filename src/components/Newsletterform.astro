@@ -48,7 +48,7 @@
     background-color: #99040b;
     color: #c3e4dd;
     border: 0.5px solid #c3e4dd;
-    width: 267px;
+    width: fit-content;
     height: 63px;
     padding: 0.7rem 2rem;
     border-radius: 36px;
@@ -58,7 +58,15 @@
     font-weight: 400;
     transition: transform 0.3s ease;
   }
-  button:hover {
-    transform: scale(1.1);
+  .submit-button:hover {
+    background-color: #99040b; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+  @media (max-width: 768px) {
+    .cherrybutton {
+      font-size: 18px;
+      padding: 0.5rem 1.5rem;
+      height: auto;
+    }
   }
 </style>
