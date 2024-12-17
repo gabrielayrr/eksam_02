@@ -16,7 +16,7 @@ import Cherrybutton from "../components/Cherrybutton.astro";
     <meta name="generator" content={Astro.generator} />
   
     <link rel="stylesheet" href="src/styles/global.css"/>
-    <link rel="stylesheet" href="/styles/webshop.css" />
+    <link rel="stylesheet" href="src/styles/webshop.css" />
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
     <link rel="stylesheet" href="https://use.typekit.net/dum4mjv.css">
     <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico">
@@ -37,18 +37,38 @@ import Cherrybutton from "../components/Cherrybutton.astro";
    <h2>WEBSHOP</h2>
    <WebshopMenu />
 
+   
 
-   <Cupcakecard image="public/images/cupcake1.webp" header="Vælg produkt" text="Start med at vælge den kage, du gerne vil bestille. Klik på produktet for at komme ind på detaljesiden."></Cupcakecard>
-   <Cupcakecard image="public/images/cupcake2.webp" header="Tilpas efter dine ønsker" text="h"></Cupcakecard>
-   <Cupcakecard image="public/images/cupcake3.webp" header="Planlæg din levering/afhenting" text="Hej med dig vi bager kager"></Cupcakecard>
-   <Cupcakecard image="public/images/cupcake4.webp" header="Læg i kurv" text="Når du har tilpasset dit produkt, klikker du på “Læg i kurv”. Du kan fortsætte med at shoppe eller gå direkte til kassen for at færdiggøre din bestilling."></Cupcakecard>
-<h2>Leder du efter noget mere personligt?</h2>
-<p><b>Mangler du kager til en <span>ekstra</span> speciel begivenhed?</b></p>
-<p>Hos Bake my Day kan vi lave netop det design, du ønsker, der måske har en særlig betydning for dig. Du kan sende os billeder af dine idéer. Dit valg af bryllupskager, dåbskager, konfirmationskager eller fødselsdagskager er derfor personligt og skræddersyet til dig. Send en besked til os, og vi vender tilbage dig, med et bud på din drømmekage.  
-<br><br>
-Custom kager er til minimum 20 personer. </p>
-<img src="public/images/cherry.webp" alt="Cherry">
-<Cherrybutton text="Send os en mail"></Cherrybutton>
+    <div class="cupcakecards">
+      <h2>KAGE - GJORT NEMT </h2>
+      <div class="spacer"></div>
+      <Cupcakecard image="public/images/cherry.webp" name="card1" header="Vælg produkt" text="Start med at vælge den kage, du gerne vil bestille. Klik på produktet for at komme ind på detaljesiden."position="left"data-speed="0.2"></Cupcakecard>
+      <Cupcakecard image="public/images/cherry.webp" name="card2" header="Tilpas efter dine ønsker" text="Størrelse: Vælg den størrelse, der passer bedst til dine behov, direkte fra dropdown-menuen. Smag/farve: Har produktet flere varianter? Intet problem - du vælger blot din favorit fra listen. Tilføj detaljer: På vores mange af vores kager har du mulighed for at tilføje skrift på kagen. Skal der være et navn, en hilsen eller noget særligt på produktet? Indtast dine ønsker i feltet for personlige tilføjelser." position="right"data-speed="0.4"></Cupcakecard>
+      <Cupcakecard image="public/images/cherry.webp" name="card3" header="Planlæg din levering/afhenting" text="Vælg en dato, der passer dig bedst - om du ønsker det leveret hjem til døren eller selv vil afhente det i en af vores butikker."position="left"data-speed="0.6"></Cupcakecard>
+      <Cupcakecard image="public/images/cherry.webp" name="card3" header="Læg i kurv" text="Når du har tilpasset dit produkt, klikker du på “Læg i kurv”. Du kan fortsætte med at shoppe eller gå direkte til kassen for at færdiggøre din bestilling."position="right"data-speed="0.8"></Cupcakecard>
+    <div class="spacer"></div>  
+    </div>
+
+      <h3>Med vores enkle system er det hurtigt og nemt at få præcis det, du ønsker. <br>
+    Vi glæder os til at gøre din oplevelse så smidig som muligt! </h3>
+    <div class="logowebshop">
+    <img class="logopic"src="public/images/logofooter.webp" alt="Logo">
+    </div>
+
+    <h2>Leder du efter noget mere personligt?</h2>
+    <br>
+    <p><b>Mangler du kager til en <span>ekstra</span> speciel begivenhed?</b></p>
+    <p>Hos Bake my Day kan vi lave netop det design, du ønsker, der måske har en særlig betydning for dig. Du kan sende os billeder af dine idéer. Dit valg af bryllupskager, dåbskager, konfirmationskager eller fødselsdagskager er derfor personligt og skræddersyet til dig. Send en besked til os, og vi vender tilbage dig, med et bud på din drømmekage.  
+    <br><br>
+    Custom kager er til minimum 20 personer. </p>
+    <div class="spoon">
+    <img src="public/images/goldspoon.webp" alt="Vintage Gold Spoon">
+    </div>
+    <Cherrybutton class="cherrybutton" text="SEND OS EN MAIL"></Cherrybutton>
+    <p><b>Har du generelle spørgsmål til os?
+    <br><br>
+    Find vores kontakt side her</b></p>
+
     </main>
     <footer>
       <Footer />

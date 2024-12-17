@@ -1,10 +1,21 @@
 ---
+//@ts-nocheck
 import "../styles/global.css";
 import Banner from "../components/banner.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Kagemenu from "../components/Kagemenu.astro";
 import Bryllupcard from "../components/Bryllupcard.astro";
+const data = await fetch ("https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
+{
+method:"GET",
+headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxlbnhnYWJ5ZWF1b2t3eXdvdmRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzM5MTc2MTksImV4cCI6MjA0OTQ5MzYxOX0.DuRoO_qLOHFUY-JsNcTAOzxDEHObSpKf47BEpclRKnQ"
+},
+}
+).then(res=>res.json());
+
+
 ---
 
 <html lang="da">
@@ -31,30 +42,38 @@ import Bryllupcard from "../components/Bryllupcard.astro";
     <main>
       <Kagemenu />
       <h2>BRYLLUPSKAGER</h2>
+<<<<<<< HEAD
+
+      <section class="bryllupcards">
+        {data.map((bryllupcard)=>{
+        return <Bryllupcard data ={bryllupcard}   />;
+        })}
+      </section>
+=======
       <div class="bryllup_cards">
         
       <Bryllupcard 
-       src="/public/images/12345.png"
+       src="/public/images/kaka1.webp"
        href="../singleview"
        ktext1="Festkage med pressede blomster" 
        ktext2="Fra 1.990.00 dkk" />
       
 
         <Bryllupcard
-       src="/public/images/12345.png"
+       src="/public/images/kaka1.webp"
        href="../singleview"
        ktext1="Cylinderkage med friske blomster" 
        ktext2="Fra 1.950.00 dkk" />
 
         <Bryllupcard
-       src="/public/images/12345.png"
+       src="/public/images/kaka1.webp"
        href="../singleview"
        ktext1="Rustik sommerfuglekage" 
        ktext2="Fra 1.590.00 dkk" />
 
 
         <Bryllupcard
-       src="/public/images/12345.png"
+       src="/public/images/kaka1.webp"
        href="../singleview"
        ktext1="Rustik blomsterkage" 
        ktext2="Fra 800.00 dkk" />
@@ -62,12 +81,12 @@ import Bryllupcard from "../components/Bryllupcard.astro";
       
 
         <Bryllupcard
-       src="/public/images/12345.png"
+       src="/public/images/kaka1.webp"
        href="../singleview"
        ktext1="Rustik festkage" 
        ktext2="Fra 1.990.00 dkk" />
+>>>>>>> origin/Iris
 
-</div>
     </main>
     <footer>
       <Footer />
@@ -76,14 +95,15 @@ import Bryllupcard from "../components/Bryllupcard.astro";
 </html>
 
 <style>
-.bryllup_cards{
+.bryllupcards{
 display: grid;
 grid-template-columns:  repeat(4, 1fr);;
 grid-template-rows: 1fr;
-column-gap: 1em;
-row-gap: 8em;
+column-gap: 2rem;
+row-gap: 8rem;
 justify-content: space-between;
 justify-items: center;
+    margin-top: 4rem;
 }
 
 
