@@ -86,8 +86,8 @@ console.log(data);
 
       <section class="singleview" >
           <div class="titelsinglev">
-          <h3>{data.ktext1}</h3>
-          <h3>{data.ktext2}</h3>
+          <h4>{data.ktext1}</h4>
+          <h5>{data.ktext2}</h5>
           </div>
           <div class="singlevcards">
           <div class="singlevcard">
@@ -120,28 +120,28 @@ console.log(data);
 </div> -->
           
 <div class="text-singlev">
-  <span class="visible-text">Vores Festkage med pressede blomster er en æstetisk fornøjelse, der forener naturens skønhed med en lækker smagsoplevelse. Kagen er omhyggeligt dekoreret med nøje udvalgte pressede blomster, der tilføjer en unik og naturlig elegance til enhver festlig lejlighed.</span>
-  <span class="dots">...</span>
-  <span class="more-text"> Vores dedikerede konditorer smører kagen op med en skøn vaniljesmørcreme, der skaber den perfekte base for både udseende og smag.
+  <p class="visible-text">Vores Festkage med pressede blomster er en æstetisk fornøjelse, der forener naturens skønhed med en lækker smagsoplevelse. Kagen er omhyggeligt dekoreret med nøje udvalgte pressede blomster, der tilføjer en unik og naturlig elegance til enhver festlig lejlighed.</p>
+  <p class="dots">...</p>
+  <p class="more-text"> Vores dedikerede konditorer smører kagen op med en skøn vaniljesmørcreme, der skaber den perfekte base for både udseende og smag.
 
             Bemærk venligst, at på grund af blomsternes naturlige variation kan udseendet af blomsterdekorationen variere fra kage til kage. Dette bidrager til hver kages unikke karakter og skaber en autentisk følelse af håndværk og individualitet,men de kommer altid til at have det lidt mere "vilde" look.
 
             Uanset om det er til en fødselsdag, bryllup eller enhver anden festlig lejlighed, vil vores Festkage med pressede blomster være et smukt og velsmagende centrum for din begivenhed.Vegan info: Alle smage undtaget Red velvet kan laves vegansk/plantebaseret. Husk at skrive i kommentarfeltet i næste skridt hvis kagen ønskes vegansk.
 
-            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</span>
+            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</p>
 </div>
 
       <!-- DROPDOWN -->
   <div class="opplyssinglev">   
-     <h3>Størrelse</h3>
+     <h5>Størrelse</h5>
       <!-- Dropdown for Størrelse -->
      <Dropdownbutton options={Størrelse} />
-      <h3>Smag</h3>
+      <h5>Smag</h5>
      <!-- Dropdown for Smag -->
       <Dropdownbutton options={Smag} />
 
      <!-- ANTAL OF CAKES -->
-     <h3>Antal</h3>
+     <h5>Antal</h5>
      <div class="counter-container">
       <span class="counter-button" id="decrement">-</span>
       <span id="counter">0</span>
@@ -155,11 +155,25 @@ console.log(data);
           <button>KØB NU</button>
          </div>
 
-    <h3> & Allergier</h3>
+    <h5> & Allergier</h5>
 
     
-    
-
+<div class="icon-row">
+    <div class="icon-text">
+      <img src="../images/vegan.webp" alt="Icon 1">
+      <p>Vegan</p>
+    </div>
+    <div class="icon-text">
+      <img src="../images/egg.webp" alt="Icon 2">
+      <p>Ægg</p>
+    </div>
+    <div class="icon-text">
+      <img src="../images/milk-bottle.webp" alt="Icon 3">
+     <p>Mælk</p>
+    </div>
+    <div class="icon-text">
+      <img src="../images/wheat.webp" alt="Icon 4">
+      <p>Wheat</p>
 
 
 
@@ -277,6 +291,26 @@ display: flex;
     font-size: 1.3rem;
 }
 
+ .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 20px; /* Space between each icon-text pair */
+      justify-content: center; /* Centers the row horizontally */
+    }
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      gap: 10px; /* Space between the icon and text */
+    }
+
+    .icon-text img {
+      width: 50px; /* Adjust the size of the icon */
+      height: 50px;
+      object-fit: cover; /* Ensures the image doesn't stretch */
+    }
+
+    
 
 
 /* FOR JAVASCRIPT TEXT SMALLER AND THE ... AND BIGGER TEXT */
