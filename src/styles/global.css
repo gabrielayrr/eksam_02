@@ -31,7 +31,7 @@ h3 {
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
-  color: #99040B;
+  color: #99040b;
   text-transform: uppercase;
 }
 
@@ -41,15 +41,20 @@ p {
   font-weight: 400;
   font-size: 24px;
 }
-h4{
+h4 {
   font-family: adobe-caslon-pro, serif;
   font-style: normal;
   font-weight: 400;
   font-size: 28px;
-  color: #99040B;
-  
+  color: #99040b;
 }
-
+h5 {
+  font-family: adobe-caslon-pro, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+}
 /* Index css*/
 
 .instagramlogo {
