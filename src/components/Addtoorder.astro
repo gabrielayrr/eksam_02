@@ -1,0 +1,26 @@
+---
+const src = Astro.props.src;
+const name = Astro.props.name;
+const price = Astro.props.price;
+---
+<div class="backgroundimg">
+<img {src} alt="">
+</div>
+<h4>{name}</h4>
+<h5>{price}</h5>
+
+
+
+<style>
+.backgroundimg{
+    width: 201px;
+height: 192px;
+border-radius: 19px;
+background: rgba(195, 228, 221, 0.57);
+}
+
+
+
+
+
+</style>

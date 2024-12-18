@@ -6,6 +6,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Kagemenu from "../components/Kagemenu.astro";
 import Bryllupcard from "../components/Bryllupcard.astro";
+
 const data = await fetch(
   "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
   {
@@ -55,13 +56,13 @@ const data = await fetch(
     </header>
     <main>
       <Kagemenu />
-      <h2>BRYLLUPSKAGER</h2>
+      <h1>BRYLLUPSKAGER</h1>
 
       <section class="bryllupcards">
         {data.map((bryllupcard)=>{
         return <Bryllupcard data ={bryllupcard}   />;
         })}
-      </section>n
+      </section>
 
     </main>
     <footer>
@@ -71,14 +72,25 @@ const data = await fetch(
 </html>
 
 <style>
-  .bryllupcards {
+ .bryllupcards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 2rem;
-    row-gap: 8rem;
-    justify-content: space-between;
-    justify-items: center;
-    margin-top: 4rem;
-  }
+    grid-template-columns: 1fr; /* One column for mobile */
+    gap: 2rem; /* Space between cards */
+    margin: 2rem auto; /* Center the grid container */
+    max-width: 1200px; /* Optional: restrict max width */
+    
+}
+
+/* Tablet/desktop screens: Four cards in the first row and one below the first card */
+@media (min-width: 768px) {
+    .bryllupcards {
+        grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+        grid-template-rows: auto auto; /* Two rows */
+        gap: 3rem; /* Add more space between the cards */
+        justify-content: center; /* Center the grid items horizontally */
+        align-content: center; /* Center the grid items vertically */
+        width: 100%; /* Make sure the grid takes up full width */
+    }
+}
+
 </style>
