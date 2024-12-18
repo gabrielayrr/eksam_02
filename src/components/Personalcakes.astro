@@ -41,17 +41,8 @@ const {image, title, subtitle , text, sluttext,} = Astro.props;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.3s ease-out;
-}
-
-.card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
  
+ }
 .button{
     position: relative;
     display: flex;
@@ -74,31 +65,26 @@ const {image, title, subtitle , text, sluttext,} = Astro.props;
 .a{
     color: black;
 }
+
+  /* Media Query til mindre skærme */
+@media (max-width: 768px) {
+  .card {
+    width: auto; /* Gør produktkortene mindre */
+  }
+
+  .card img {
+    width: 45%;
+    height: auto;
+  }
+
+  .spørgsmål h3 {
+    font-size: 1.5rem; /* Gør overskrifterne mindre */
+  }
+   .card h3{
+    font-size: 1.5rem; /* Gør overskrifterne mindre */
+  }
+
+}
 </style>
-
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-    // Select the card element
-    const card = document.getElementById('card');
-
-    // Function to check if the card is in the viewport
-    function checkScroll() {
-        const rect = card.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // If the top of the card is within the viewport, add the "show" class
-        if (rect.top <= windowHeight && rect.bottom >= 0) {
-            card.classList.add('show');
-        } else {
-            card.classList.remove('show');
-        }
-    }
-
-    // Listen for scroll events to trigger the check
-    window.addEventListener('scroll', checkScroll);
-
-    // Trigger the check on page load
-    checkScroll();  // This ensures the check is done right after page load
-});
 
 </script>
