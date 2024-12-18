@@ -8,6 +8,9 @@ import Dropdownbutton from "../../components/Dropdownbutton.astro";
 const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
 const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
 let count = 0;
+import Addtoorder from "../../components/Addtoorder.astro";
+
+
 export async function getStaticPaths() {
   const data = await fetch(
     "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
@@ -174,14 +177,40 @@ console.log(data);
     <div class="icon-text">
       <img src="../images/wheat.webp" alt="Icon 4">
       <p>Wheat</p>
-
-
+</div>
+</div>
 
     <!-- ADD TO ORDER -->
+<div class="addons">
+
+  <div class="addoncrd" >
+    <Addtoorder
+     src=""
+     name="Stearinlys"
+    price="25 dkk"
+   />
+   <button>TILFØJ</button>
+   </div>
+
+   <div class="addoncrd">
+       <Addtoorder
+     src=""
+     name="Kort"
+    price="25 dkk"
+    />
+    <button>TILFØJ</button>
+    </div>
     
-<div>
-   
+    <div class="addoncrd">
+     <Addtoorder
+     src=""
+     name="Sprikles"
+    price="30 dkk"
+    />  
+    <button>TILFØJ</button>
 </div>
+    </div>
+
          
           
     </section>
@@ -310,6 +339,13 @@ display: flex;
       object-fit: cover; /* Ensures the image doesn't stretch */
     }
 
+    /* ADD ONS STYLING */
+.addons{
+  display: flex;
+  gap: 2rem;
+  
+}
+ 
     
 
 
