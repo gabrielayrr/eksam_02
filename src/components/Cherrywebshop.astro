@@ -8,7 +8,7 @@ const {image, header, text, position, title,end} = Astro.props;
     <h2>{title}</h2>
     <h3>{header}</h3>
     <p>{text}</p>
-    <h4>{end}</h4>
+    <p>{end}</p>
 
 </section>
 
@@ -53,7 +53,13 @@ const {image, header, text, position, title,end} = Astro.props;
     opacity: 1;
     transform: translateY(0);
 }
-
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px; /* Adjust heading size */
+  }
+  h2 {
+    font-size: 30px; /* Adjust heading size */
+  }
 
 
 </style>
@@ -73,6 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 0.2, 
     });
 
-    cards.forEach((card) => observer.observe(card));
+       cards.forEach((card) => observer.observe(card));
 });
 </script>
