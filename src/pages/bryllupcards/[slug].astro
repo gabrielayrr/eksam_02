@@ -4,8 +4,11 @@ import "../../styles/global.css";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import Kagemenu from "../../components/Kagemenu.astro";
+import Dropdownbutton from "../../components/Dropdownbutton.astro";
 
-
+const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
+const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
+let count = 0;
 export async function getStaticPaths() {
   const data = await fetch(
     "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
@@ -84,7 +87,7 @@ console.log(data);
 
       <section class="singleview" >
           <div class="titelsinglev">
-          <h2>{data.ktext1}</h2>
+          <h3>{data.ktext1}</h3>
           <h3>{data.ktext2}</h3>
           </div>
           <div class="singlevcards">
@@ -129,24 +132,41 @@ console.log(data);
             Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</span>
 </div>
 
+      <!-- DROPDOWN -->
+  <div class="opplyssinglev">   
+     <h3>Størrelse</h3>
+      <!-- Dropdown for Størrelse -->
+     <Dropdownbutton options={Størrelse} />
+      <h3>Smag</h3>
+     <!-- Dropdown for Smag -->
+      <Dropdownbutton options={Smag} />
 
-          <divd class="opplyssinglev">
-          <h3>Størrelse</h3>
-          
-          <h3>Smag</h3>
-          
-          <h3>Antal</h3>
-           </div>
-          <div class="brnsinglev">
-            <div class="singlevbtns">
-              <div>
+     <!-- ANTAL OF CAKES -->
+     <h3>Antal</h3>
+     <div class="counter-container">
+      <span class="counter-button" id="decrement">-</span>
+      <span id="counter">0</span>
+      <span class="counter-button" id="increment">+</span>
+    </div>
+  </div>
+          <div class="btnsinglev1">
           <button>TILFØJ TIL KURV</button>
-          </div>
-          <div>
+           <div/>
+           <div class="btnsinglev2">
           <button>KØB NU</button>
-          <div/>
-          </div>
-          </div>
+         </div>
+
+    <h3> & Allergier</h3>
+
+    
+    
+
+
+
+
+    <!-- ADD TO ORDER -->
+    
+         
           
     </section>
   <style>
@@ -228,25 +248,36 @@ background: rgba(195, 228, 221, 0.57);
   }
 
   .text-singlev {
-    cursor: pointer; /* Show a pointer cursor to indicate interactivity */
-    /* text-align: justify;   we need to have this on in the global css */
+    cursor: pointer; /
+    text-align: justify;   
   }
 
-  .singlevbtns{
-     display: inline-flex;
-min-width: 200px;
-padding: 15px 45px 12px 45px;
-justify-content: center;
-align-items: center;
-gap: 10px;
-border-radius: 36px;
-border: 3px solid var(--secondary-colors-blue, #C3E4DD);
+
+/* BUTTONS STYLING */
+  .btnsinglev1{
+     
+    }
+    .btnsinglev2{
+      border: 3px solid #C3E4DD;
+    }
+
+
+
     
-
+    /* COUNTER STYLING */
+  .counter-button{
+cursor: pointer; 
+        user-select: none; 
   }
+.counter-container{
+display: flex;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
 
 
-/* FOR JAVASCRIPT TEXT SMALLER AND THE ... AND BIGGER */
+
+/* FOR JAVASCRIPT TEXT SMALLER AND THE ... AND BIGGER TEXT */
 /* 
 .text-singlev {
   max-width: 600px;
@@ -267,11 +298,15 @@ border: 3px solid var(--secondary-colors-blue, #C3E4DD);
   display: none; 
 } */
 
-
   </style>
+    </main>
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+   <script>
 
-  <script>
-// THE JAVASCRIPT FOR TEXT SMALLER AND THEN BIGGER
+//  THE JAVASCRIPT FOR TEXT SMALLER AND THEN BIGGER
 
 // document.getElementById("textSinglev")?.addEventListener("click", function () {
 //   const dots = document.querySelector(".dots") as HTMLElement;
@@ -284,13 +319,37 @@ border: 3px solid var(--secondary-colors-blue, #C3E4DD);
 //     dots.style.display = "inline"; // Show the dots
 //     moreText.style.display = "none"; // Hide the additional text
 //   }
-// });
+// }); -->
 
 
-  </script>
-    </main>
-    <footer>
-      <Footer />
-    </footer>
-  </body>
+    
+  // counter-container JAVASCRIPT
+  document.addEventListener("DOMContentLoaded", () => {
+        // Safely get the DOM elements
+        const decrementBtn = document.getElementById("decrement");
+        const incrementBtn = document.getElementById("increment");
+        const counterDisplay = document.getElementById("counter");
+
+        // Check if elements exist to avoid null errors
+        if (decrementBtn && incrementBtn && counterDisplay) {
+          let count = 0; // Initialize the counter
+
+          // Decrement Button Click Event
+          decrementBtn.addEventListener("click", () => {
+            count -= 1;
+            counterDisplay.textContent = count.toString(); // Convert number to string
+          });
+
+          // Increment Button Click Event
+          incrementBtn.addEventListener("click", () => {
+            count += 1;
+            counterDisplay.textContent = count.toString(); // Convert number to string
+          });
+        } else {
+          console.error("One or more DOM elements are missing.");
+        }
+      });
+</script>
+
+
 </html>
