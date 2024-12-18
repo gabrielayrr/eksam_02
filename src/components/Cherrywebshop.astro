@@ -58,6 +58,24 @@ const {image, header, text, position, title,end} = Astro.props;
   h2 {
     font-size: 30px; /* Adjust heading size */
   }
+  /* Media Query til mindre skærme */
+@media (max-width: 768px) {
+  .product {
+    width: 45%; /* Gør produktkortene mindre */
+  }
+
+  .product img {
+    width: 100%;
+    height: auto;
+  }
+
+  .product h3 {
+    font-size: 1.2rem; /* Gør overskrifterne mindre */
+  }
+
+  .product p {
+    font-size: 0.9rem; /* Mindre tekst */
+  }
 }
 
 </style>
