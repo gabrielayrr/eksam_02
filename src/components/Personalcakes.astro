@@ -1,90 +1,83 @@
 ---
-import Cherrybutton from './Cherrybutton.astro';
-import Kontakt from '../pages/kontakt.astro';
-const {image, title, subtitle , text, sluttext,} = Astro.props;
+import Cherrybutton from "./Cherrybutton.astro";
+import Kontakt from "../pages/kontakt.astro";
+const { image, title, subtitle, text, sluttext } = Astro.props;
 ---
 
-
-<section class=card>
-    <img src={image}/>
-    <h2>{title}</h2>
-    <h3>{subtitle}</h3>
-    <p>{text}</p>
-    
+<section class="card">
+  <img src={image} />
+  <h2>{title}</h2>
+  <h3>{subtitle}</h3>
+  <p>{text}</p>
 </section>
 <section>
-    <br>
-<p><b>{sluttext}</b></p>
+  <br />
+  <p><b>{sluttext}</b></p>
 </section>
 
-<section class=button>
-<Cherrybutton  text="SEND OS EN MAIL"></Cherrybutton>
+<section class="button">
+  <Cherrybutton text="SEND OS EN MAIL" />
 </section>
 <section class="spørgsmål">
-
- <h3>
+  <h3>
     Har du generelle spørgsmål til os?
-    <br>
-    Find vores kontakt side <a href="/kontakt">her</a></p></h3>
+    <br />
+    Find vores kontakt side <a href="/kontakt">her</a>
+  </h3>
 </section>
 
-
 <style>
-     .card img{
+  .card img {
     width: 25rem;
- }
- .card{
+  }
+  .card {
     position: relative;
     margin-top: 5rem;
-    width: 100%; 
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
- 
- }
-.button{
+  }
+  .button {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
-    }
-.spørgsmål h3{
+  }
+  .spørgsmål h3 {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 5rem;
     color: black;
-    
-    
-}
-.spørgsmål a{
-    
+  }
+  .spørgsmål a {
     color: #99040b;
     text-decoration: underline;
-}
+    justify-content: center;
+    align-items: center;
+  }
 
   /* Media Query til mindre skærme */
-@media (max-width: 768px) {
-  .card {
-    width: auto; /* Gør produktkortene mindre */
-  }
+  @media (max-width: 768px) {
+    .card {
+      width: auto; /* Gør produktkortene mindre */
+    }
 
-  .card img {
-    width: 45%;
-    height: auto;
-  }
+    .card img {
+      width: 45%;
+      height: auto;
+    }
 
-  .spørgsmål h3 {
-    font-size: 1.5rem; /* Gør overskrifterne mindre */
+    .spørgsmål h3 {
+      font-size: 1.5rem; /* Gør overskrifterne mindre */
+    }
+    .card h3 {
+      font-size: 1.5rem; /* Gør overskrifterne mindre */
+    }
   }
-   .card h3{
-    font-size: 1.5rem; /* Gør overskrifterne mindre */
-  }
-
-}
 </style>
-
-</script>
