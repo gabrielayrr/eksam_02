@@ -1,64 +1,87 @@
 <section class="webshopmenu1">
-
-<div class="webshopmenu-tekst1">
-    <p>På vores webshop har vi gjort det let og intuitivt for dig at tilpasse og bestille dine varer, præcis som du ønsker det.</p> 
-</div>
-<div class="webshopmenu-tekst2">
+  <div class="webshopmenu-tekst1">
+    <p>
+      På vores webshop har vi gjort det let og intuitivt for dig at tilpasse og
+      bestille dine varer, præcis som du ønsker det.
+    </p>
+  </div>
+  <div class="webshopmenu-tekst2">
     <p>Dyk ned i vores kategorier, og lad dig blive inspireret:</p>
-</div>
+  </div>
 </section>
 
-
 <section class="webshopmenu2">
-    <div class="webshopmenu-photo">
-      <a href="/bryllup">
-      <img src="/images/bryllup.webp" alt="Wedding cake">
-      <div class="photo-text"> <h2>Bryllup</h2></div>
+  <div class="webshopmenu-photo">
+    <a href="/bryllup">
+      <img src="/images/bryllup.webp" alt="Wedding cake" />
+      <div class="photo-text"><h2>Bryllup</h2></div>
       <button class="photo-button">BESTIL HER</button>
     </a>
-    </div>
-    <div class="webshopmenu-photo">
-      <a href="/bryllup">
-      <img src="/images/konfirmation.webp" alt="Konfirmation cake">
-      <div class="photo-text"> <h2>KONFIRMATION</h2></div>
+  </div>
+  <div class="webshopmenu-photo">
+    <a href="/bryllup">
+      <img src="/images/konfirmation.webp" alt="Konfirmation cake" />
+      <div class="photo-text"><h2>KONFIRMATION</h2></div>
       <button class="photo-button">BESTIL HER</button>
     </a>
-    </div>
-    <div class="webshopmenu-photo">
-      <a href="/bryllup">
-      <img src="/images/baptims.webp" alt="Baptism cake">
-      <div class="photo-text"> <h2>BARNEDÅB</h2></div>
+  </div>
+  <div class="webshopmenu-photo">
+    <a href="/bryllup">
+      <img src="/images/baptims.webp" alt="Baptism cake" />
+      <div class="photo-text"><h2>BARNEDÅB</h2></div>
       <button class="photo-button">BESTIL HER</button>
     </a>
-    </div>
-    <div class="webshopmenu-photo">
-      <a href="/bryllup">
-      <img src="/images/babyshower.webp" alt="Babyshower cake">
-      <div class="photo-text"> <h2>BABYSHOWER</h2></div>
+  </div>
+  <div class="webshopmenu-photo">
+    <a href="/bryllup">
+      <img src="/images/babyshower.webp" alt="Babyshower cake" />
+      <div class="photo-text"><h2>BABYSHOWER</h2></div>
       <button class="photo-button">BESTIL HER</button>
     </a>
-    </div>
-    <div class="webshopmenu-photo">
-      <a href="/bryllup">
-      <img src="/images/birthday.webp" alt="Birthday cake">
-      <div class="photo-text"> <h2>FØDSELSDAG</h2></div>
+  </div>
+  <div class="webshopmenu-photo">
+    <a href="/bryllup">
+      <img src="/images/birthday.webp" alt="Birthday cake" />
+      <div class="photo-text"><h2>FØDSELSDAG</h2></div>
       <button class="photo-button">BESTIL HER</button>
     </a>
-    </div>
-    <div class="webshopmenu-photo">
-      <a href="/bryllup">
-      <img src="/images/fest.webp" alt="Fest cake">
-      <div class="photo-text"><h2>Fest</h2> </div>
+  </div>
+  <div class="webshopmenu-photo">
+    <a href="/bryllup">
+      <img src="/images/fest.webp" alt="Fest cake" />
+      <div class="photo-text"><h2>Fest</h2></div>
       <button class="photo-button">BESTIL HER</button>
     </a>
-    </div>
-  </section>
-  
-  
+  </div>
+</section>
 
 <style>
+  .photo-button {
+    position: absolute;
+    top: 60%; /* Place the button below the text */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 50px;
+    font-family: adobe-caslon-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: #99040b;
+    color: #c3e4dd;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
 
+  .webshopmenu-photo:hover .photo-button {
+    transform: translate(-50%, -40%) scale(1.2); /* Scale the button to 1.2x size */
+    transition: transform 0.3s ease; /* Smooth growth animation */
+  }
 
+<<<<<<< HEAD
   
  .photo-button {
   position: absolute;
@@ -84,66 +107,70 @@
 }
 
 .webshopmenu2{
+=======
+  .webshopmenu2 {
+>>>>>>> e4d3b9e0ae994908fe7b299259431997f4f95b80
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 30px;
     margin: 30px;
     gap: 40px;
-}
+  }
 
+  .webshopmenu-photo {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
 
-.webshopmenu-photo {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
+  .webshopmenu-photo:hover img {
+    filter: blur(5px); /* Adjust the blur intensity */
+    transform: scale(1.05); /* Optional: slight zoom effect */
+    transition:
+      filter 0.3s ease,
+      transform 0.3s ease;
+  }
 
+  .photo-text h2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+  }
 
-.webshopmenu-photo:hover img {
-  filter: blur(5px); /* Adjust the blur intensity */
-  transform: scale(1.05); /* Optional: slight zoom effect */
-  transition: filter 0.3s ease, transform 0.3s ease;
-}
+  .webshopmenu2 img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+  }
 
-
-.photo-text h2 {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-text-align: center;
-color: black;
-}
-
-.webshopmenu2 img
-    {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 10px;
-      }
-
-
-    .webshopmenu-tekst1{
-        padding: 40px;
-        margin: 40px;
-    }
-    
-  
-
+<<<<<<< HEAD
     @media screen and (max-width: 768px) {
         .photo-button {
     font-size: 14px;
  padding: 0.7rem 2rem 0.2rem 2rem;  }
+=======
+  .webshopmenu-tekst1 {
+    padding: 40px;
+    margin: 40px;
+  }
+>>>>>>> e4d3b9e0ae994908fe7b299259431997f4f95b80
 
+  @media screen and (max-width: 768px) {
+    .photo-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
 
     .webshopmenu2 {
-        grid-template-columns: 1fr; /* Switch to single-column layout */
-        text-align: center; /* Center text and images */
+      grid-template-columns: 1fr; /* Switch to single-column layout */
+      text-align: center; /* Center text and images */
     }
-  /* Ensure text appears after photo */
-  .photo-text {
-font-size: 40px;
+    /* Ensure text appears after photo */
+    .photo-text {
+      font-size: 40px;
+    }
   }
-
-
-}
+</style>

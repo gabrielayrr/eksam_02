@@ -1,29 +1,30 @@
-
 <div class="banner">
-    <p class="banner-text"> Ny butik åben i Fisketorvet! Åben hver dag fra 11 -21</p>
-  </div>
+  <p class="banner-text">
+    Ny butik åben i Fisketorvet! Åben hver dag fra 11 - 21
+  </p>
+</div>
 <style>
   .banner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #C3E4DD; 
-  text-align: center;
-  z-index: 1000;
-}
-  
-.banner-text {
-    font-family: adobe-caslon-pro, serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #c3e4dd;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .banner-text {
+    font-family: fino-sans, sans-serif;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 15px;
-    color: black;
-    
+    color: #99040b;
+
     /* Animation setup */
     white-space: nowrap; /* Prevents the text from wrapping */
     display: inline-block; /* Needed for animation to work properly */
-    
+
     /* Apply the scrolling animation */
     animation: scrollText 15s linear infinite;
   }
@@ -40,11 +41,11 @@
     }
   }
 
-   /* Media query for mobile devices */
-   @media (max-width: 768px) {
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
     .banner-text {
-      font-size: 16px; 
-      animation: scrollText 15s linear infinite; 
+      font-size: 16px;
+      animation: scrollText 15s linear infinite;
     }
   }
 </style>

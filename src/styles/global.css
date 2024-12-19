@@ -33,6 +33,7 @@ h3 {
   font-weight: 400;
   font-size: 40px;
   color: #99040b;
+  color: #99040b;
   text-transform: uppercase;
 }
 
@@ -68,7 +69,7 @@ a {
 }
 
 .instagramlogo:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .instagramgalleri {
   text-align: center;
@@ -88,6 +89,14 @@ a {
   }
   h2 {
     font-size: 30px; /* Adjust heading size */
+  }
+
+  h3 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  p {
+    font-size: 15px; /* Adjust heading size */
   }
 }
 /*About css*/
