@@ -16,14 +16,13 @@ import Kontakt from '../pages/kontakt.astro';
 
 <section class="text">
 <p>Hos Bake my Day kan vi lave netop det design, du ønsker, der måske har en særlig betydning for dig. Du kan sende os billeder af dine idéer. Dit valg af bryllupskager, dåbskager, konfirmationskager eller fødselsdagskager er derfor personligt og skræddersyet til dig. Send en besked til os, og vi vender tilbage dig, med et bud på din drømmekage.  
-<br>
-<br>
-<b>Custom kager er til minimum 20 personer. </b></p>
+<br><br><b>Custom kager er til minimum 20 personer. </b></p>
 </section>
 
 <section class=button>
 <Cherrybutton  text="SEND OS EN MAIL"></Cherrybutton>
 </section>
+
 <section class="spørgsmål">
  <h3>Har du generelle spørgsmål til os?<br>Find vores kontakt side<a href="/kontakt">her</a></h3>
 </section>
@@ -46,21 +45,6 @@ import Kontakt from '../pages/kontakt.astro';
 
 
 <style>
-     .card img{
-    width: 25rem;
- }
- .card{
-    position: relative;
-    margin-top: 5rem;
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
- }
- .card h3{
-  color:black;
- }
 .button{
     position: relative;
     display: flex;
@@ -75,14 +59,31 @@ import Kontakt from '../pages/kontakt.astro';
     align-items: center;
     margin-top: 5rem;
     color: black;
-    
-  
 }
 .spørgsmål a{
   
     color: #99040b;
     text-decoration: underline;
   }
+
+.subtitle h3{
+     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    }
+  .title{
+    margin-top: 12rem;
+  }
+.text p{
+    margin-left: 10rem;
+    margin-right: 5rem;
+    margin-top: 3rem;
+    }
+
+
+
 
   /* Media Query til mindre skærme */
 @media (max-width: 768px) {
