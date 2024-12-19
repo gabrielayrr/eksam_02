@@ -9,7 +9,7 @@ interface Props {
 const { name, price, imageSrc, items = [] } = Astro.props;
 ---
 
-<article
+<article class="menu-item hidden"
   style="display : flex; flex-direction: column; align-items :center; text-align: center; gap: 10px; margin-bottom:20px;"
 >
   <img src={imageSrc} alt={name} />
@@ -18,7 +18,9 @@ const { name, price, imageSrc, items = [] } = Astro.props;
     style="font-size: 40px; font-family: font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400; color : #99040B"
+    margin-top: 5px;
     >{price}DKK</strong
+  
   >
   <ul
     style="list-style: none; font-size: 24px; font-family: adobe-caslon-pro, serif;
@@ -27,4 +29,50 @@ const { name, price, imageSrc, items = [] } = Astro.props;
   >
     {items.map((item: string) => <li>{item}</li>)}
   </ul>
+
 </article>
+<script type="module" src="/scripts/parallax.js" defer></script>
+
+<style>
+  .hidden {
+  opacity: 0;
+  transform: translateY(20px); /* Adjust as needed */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  /* Adjust the layout to have two images side by side on mobile */
+  .menu-item {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping to the next row */
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .menu-item img {
+    width: 80%;  /
+    margin-bottom: 10px;  /* Add some spacing between the images */
+  }
+  .menu-item strong {
+    font-size: 24px;  /* Smaller font for the price on mobile */
+  }
+
+  .menu-item ul {
+    font-size: 18px;  /* Smaller font for list items */
+  }
+
+  .menu-item li {
+    font-size: 16px;  /* Smaller font size for each list item */
+  }
+  .price {
+    font-size: 18px;  /* Smaller font for the price on mobile */
+  }
+}
+
+
+
+</style>

@@ -84,6 +84,14 @@ h5 {
   h2 {
     font-size: 30px; /* Adjust heading size */
   }
+
+  h3 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  p {
+    font-size: 15px; /* Adjust heading size */
+  }
 }
 /*About css*/
 
