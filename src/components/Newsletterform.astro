@@ -4,10 +4,6 @@
     <input type="email" name="email" placeholder="E-mailaddresse" required />
     <button type="submit" class="submit-button">TILMELD</button>
   </div>
-  <label class="checkbox-group">
-    <input type="checkbox" name="subscribe" />
-    <span>Ja tak, jeg vil abonnere på nyhedsbrevet</span>
-  </label>
 </form>
 
 <style>
@@ -33,17 +29,7 @@
     border-radius: 36px;
     font-size: 15px;
   }
-  .checkbox-group {
-    display: flex;
-    justify-content: center;
-    font-size: 24px;
-    font-family: adobe-caslon-pro, serif;
-    font-style: normal;
-    font-weight: 400;
-  }
-  .checkbox-group input {
-    margin-right: 0.5rem;
-  }
+
   .submit-button {
     background-color: #99040b;
     color: #c3e4dd;
@@ -63,29 +49,30 @@
     transform: scale(1.05); /* Slightly enlarge the button */
   }
   @media (max-width: 768px) {
-  .newsletter-form {
-    margin: 10px; /* Reduce margin on small screens */
-  }
+    .newsletter-form {
+      margin: 10px; /* Reduce margin on small screens */
+    }
 
-  .input-group {
-    flex-direction: column; /* Stack inputs vertically */
-    gap: 1rem;
-  }
+    .input-group {
+      flex-direction: column; /* Stack inputs vertically */
+      gap: 1rem;
+    }
 
-  .input-group input {
-    width: 100%;  /* Full width on mobile */
-    max-width: none;  /* Remove max-width on mobile */
-  }
+    .input-group input {
+      width: 100%; /* Full width on mobile */
+      max-width: none; /* Remove max-width on mobile */
+    }
 
-  .checkbox-group {
-    font-size: 18px;  /* Smaller font size for checkbox text */
-  }
+    .checkbox-group {
+      font-size: 18px; /* Smaller font size for checkbox text */
+    }
 
-  .submit-button {
-    font-size: 18px; /* Adjust font size of submit button */
-    padding: 0.5rem 1.5rem;  /* Adjust button padding */
-    width: 100%; /* Full-width button */
-    max-width: 358px;  /* Limit width to match input fields */
-    margin-top: 1rem;  /* Add some space between button and checkbox */
+    .submit-button {
+      font-size: 18px; /* Adjust font size of submit button */
+      padding: 0.5rem 1.5rem; /* Adjust button padding */
+      width: 100%; /* Full-width button */
+      max-width: 358px; /* Limit width to match input fields */
+      margin-top: 1rem; /* Add some space between button and checkbox */
+    }
   }
-}
+</style>
