@@ -59,11 +59,12 @@ const data = await fetch(
       <h1>BRYLLUPSKAGER</h1>
 
       <section class="bryllupcards">
-        {data.map((bryllupcard)=>{
-        return <Bryllupcard data ={bryllupcard}   />;
-        })}
+        {
+          data.map((bryllupcard) => {
+            return <Bryllupcard data={bryllupcard} />;
+          })
+        }
       </section>
-
     </main>
     <footer>
       <Footer />
@@ -72,22 +73,20 @@ const data = await fetch(
 </html>
 
 <style>
- .bryllupcards {
+  .bryllupcards {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin: 1rem;
-    
-}
+    margin: 6rem;
+  }
 
-
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
     .bryllupcards {
-        grid-template-columns: repeat(4, 1fr); /* Four equal columns */
-        grid-template-rows: auto auto; /* Two rows */
-        gap: 3rem; /* Add more space between the cards */
-        width: 100%; /* Make sure the grid takes up full width */
+      grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+      grid-template-rows: auto auto; /* Two rows */
+      gap: 3rem; /* Add more space between the cards */
+      width: 100%; /* Make sure the grid takes up full width */
+      margin: 3rem;
     }
-}
-
+  }
 </style>
