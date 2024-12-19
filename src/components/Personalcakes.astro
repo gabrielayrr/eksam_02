@@ -1,0 +1,90 @@
+---
+import Cherrybutton from './Cherrybutton.astro';
+import Kontakt from '../pages/kontakt.astro';
+const {image, title, subtitle , text, sluttext,} = Astro.props;
+---
+
+
+<section class=card>
+    <img src={image}/>
+    <h2>{title}</h2>
+    <h3>{subtitle}</h3>
+    <p>{text}</p>
+    
+</section>
+<section>
+    <br>
+<p><b>{sluttext}</b></p>
+</section>
+
+<section class=button>
+<Cherrybutton  text="SEND OS EN MAIL"></Cherrybutton>
+</section>
+<section class="spørgsmål">
+
+ <h3>
+    Har du generelle spørgsmål til os?
+    <br>
+    Find vores kontakt side <a href="/kontakt">her</a></p></h3>
+</section>
+
+
+<style>
+     .card img{
+    width: 25rem;
+ }
+ .card{
+    position: relative;
+    margin-top: 5rem;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+ 
+ }
+.button{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    }
+.spørgsmål{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    color: black;
+    .a{
+    color: black;
+}
+    
+}
+.a{
+    color: black;
+}
+
+  /* Media Query til mindre skærme */
+@media (max-width: 768px) {
+  .card {
+    width: auto; /* Gør produktkortene mindre */
+  }
+
+  .card img {
+    width: 45%;
+    height: auto;
+  }
+
+  .spørgsmål h3 {
+    font-size: 1.5rem; /* Gør overskrifterne mindre */
+  }
+   .card h3{
+    font-size: 1.5rem; /* Gør overskrifterne mindre */
+  }
+
+}
+</style>
+
+</script>
