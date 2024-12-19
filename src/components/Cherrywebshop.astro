@@ -1,5 +1,5 @@
 ---
-const {image, header, text, position, title,end} = Astro.props;
+const {image, header, text, position, title} = Astro.props;
 ---
 
 
@@ -8,17 +8,15 @@ const {image, header, text, position, title,end} = Astro.props;
     <h2>{title}</h2>
     <h3>{header}</h3>
     <p>{text}</p>
-    <p>{end}</p>
 
 </section>
 
   <style>
 
 .card {
-    position: relative;
-    top: 20%;
-    width: 40%; 
- 
+  position: relative;
+  top: 20%;
+  width: 40%; 
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -33,13 +31,13 @@ const {image, header, text, position, title,end} = Astro.props;
 
 .left {
   align-self: flex-start;
-  margin-left: 2rem;
+  margin-left: 3rem;
   width: 40rem;
 }
 
 .right {
   align-self: flex-end;
-  margin-right: 2rem;
+  margin-right: 3rem;
   width: 40rem;
 }
 
@@ -52,10 +50,10 @@ const {image, header, text, position, title,end} = Astro.props;
     transform: translateY(0);
 }
 
-  /* Media Query til mindre skærme */
+ 
 @media (max-width: 768px) {
   .card {
-    width: 60%; /* Gør produktkortene mindre */
+    width: 60%; 
   }
 
   .card img {
@@ -64,7 +62,7 @@ const {image, header, text, position, title,end} = Astro.props;
   }
 
   .card h3 {
-    font-size: 1.5rem; /* Gør overskrifterne mindre */
+    font-size: 1.5rem; 
   }
 
 }
