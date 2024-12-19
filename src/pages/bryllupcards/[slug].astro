@@ -8,6 +8,8 @@ import Dropdownbutton from "../../components/Dropdownbutton.astro";
 const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
 const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
 let count = 0;
+import Cherrybutton from "../../components/Cherrybutton.astro";
+
 import Addtoorder from "../../components/Addtoorder.astro";
 
 
@@ -52,44 +54,10 @@ console.log(data);
     <main>
       <Kagemenu />
 
-      <section>
-        <!-- vinstri/uppi -->
-
-       <div>
-            <!-- myndir -->
-              
-        <div>
-          <!-- carrousel -->
-          <div></div>
-          <!-- minni myndir -->
-          <div>
-            <!-- mynd preview -->
-            <div></div>
-              <!-- mynd preview -->
-            <div></div>
-          </div>
-        </div>
-            <!-- texti -->
-            
-        <div></div>
-       </div>
-
-       <!-- hægri/nidri -->
-       <div>
-        <!-- titel og upplysingar -->
-        <div></div>
-        <!-- buttons -->
-        <div></div>
-        <!-- allergier -->
-        <div></div>
-        <!-- add to order -->
-        <div></div>
-       </div>
-      </section>
-
       <section class="singleview" >
+
           <div class="titelsinglev">
-          <h4>{data.ktext1}</h4>
+          <h3>{data.ktext1}</h3>
           <h5>{data.ktext2}</h5>
           </div>
           <div class="singlevcards">
@@ -106,34 +74,22 @@ console.log(data);
           </div>
           </div>
 
-          <!-- JAVASCRIPT FOR THE TEXT IF WE LIKE THAT INSTEAD -->
-
-          <!-- <div class="text-singlev" id="textSinglev">
+          <div class="text-singlev" id="textSinglev">
           <p class="text" id="text">
            Vores Festkage med pressede blomster er en æstetisk fornøjelse, der forener naturens skønhed med en lækker smagsoplevelse. Kagen er omhyggeligt dekoreret med nøje udvalgte pressede blomster, der tilføjer en unik og naturlig elegance til enhver festlig lejlighed.
-          <span class="dots">...</span>
+          <span class="dots">... Read more</span>
            <span class="more-text"> Vores dedikerede konditorer smører kagen op med en skøn vaniljesmørcreme, der skaber den perfekte base for både udseende og smag.
 
             Bemærk venligst, at på grund af blomsternes naturlige variation kan udseendet af blomsterdekorationen variere fra kage til kage. Dette bidrager til hver kages unikke karakter og skaber en autentisk følelse af håndværk og individualitet,men de kommer altid til at have det lidt mere "vilde" look.
 
             Uanset om det er til en fødselsdag, bryllup eller enhver anden festlig lejlighed, vil vores Festkage med pressede blomster være et smukt og velsmagende centrum for din begivenhed.Vegan info: Alle smage undtaget Red velvet kan laves vegansk/plantebaseret. Husk at skrive i kommentarfeltet i næste skridt hvis kagen ønskes vegansk.
 
-            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</span>
+            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)
   </p>
-</div> -->
+</div> 
           
-<div class="text-singlev">
-  <p class="visible-text">Vores Festkage med pressede blomster er en æstetisk fornøjelse, der forener naturens skønhed med en lækker smagsoplevelse. Kagen er omhyggeligt dekoreret med nøje udvalgte pressede blomster, der tilføjer en unik og naturlig elegance til enhver festlig lejlighed.</p>
-  <p class="dots">...</p>
-  <p class="more-text"> Vores dedikerede konditorer smører kagen op med en skøn vaniljesmørcreme, der skaber den perfekte base for både udseende og smag.
 
-            Bemærk venligst, at på grund af blomsternes naturlige variation kan udseendet af blomsterdekorationen variere fra kage til kage. Dette bidrager til hver kages unikke karakter og skaber en autentisk følelse af håndværk og individualitet,men de kommer altid til at have det lidt mere "vilde" look.
-
-            Uanset om det er til en fødselsdag, bryllup eller enhver anden festlig lejlighed, vil vores Festkage med pressede blomster være et smukt og velsmagende centrum for din begivenhed.Vegan info: Alle smage undtaget Red velvet kan laves vegansk/plantebaseret. Husk at skrive i kommentarfeltet i næste skridt hvis kagen ønskes vegansk.
-
-            Bestillingsfrist: Minimum 7 dage (Ring og spørg os først, hvis der er mindre end 7 dage)</p>
-</div>
-
+<div class="optionsWrapper">
       <!-- DROPDOWN -->
   <div class="opplyssinglev">   
      <h5>Størrelse</h5>
@@ -151,16 +107,19 @@ console.log(data);
       <span class="counter-button" id="increment">+</span>
     </div>
   </div>
-          <div class="btnsinglev1">
-          <button>TILFØJ TIL KURV</button>
-           <div/>
-           <div class="btnsinglev2">
-          <button>KØB NU</button>
-         </div>
+          <div class="btnsinglev">
+          <Cherrybutton class="cherrybutton" text="TILFØJ TIL KURV"></Cherrybutton>
+           
+           
+          <Cherrybutton class="cherrybutton" text="KØB"></Cherrybutton>
+        
+    </div>
+</div>
 
+<!-- EXTRA INFO -->
+<div class="extraInformationWrapper">
     <h5> & Allergier</h5>
 
-    
 <div class="icon-row">
     <div class="icon-text">
       <img src="../images/vegan.webp" alt="Icon 1">
@@ -185,32 +144,32 @@ console.log(data);
 
   <div class="addoncrd" >
     <Addtoorder
-     src=""
+     src="../images/candles.webp"
      name="Stearinlys"
     price="25 dkk"
    />
-   <button>TILFØJ</button>
+  <Cherrybutton class="cherrybutton" text="TILFØJ"></Cherrybutton>
    </div>
 
    <div class="addoncrd">
        <Addtoorder
-     src=""
+     src="../images/cardaddon.webp"
      name="Kort"
     price="25 dkk"
     />
-    <button>TILFØJ</button>
+    <Cherrybutton class="cherrybutton" text="TILFØJ"></Cherrybutton>
     </div>
     
     <div class="addoncrd">
      <Addtoorder
-     src=""
+     src="../images/sprinkles.webp"
      name="Sprikles"
     price="30 dkk"
     />  
-    <button>TILFØJ</button>
+    <Cherrybutton class="cherrybutton" text="TILFØJ"></Cherrybutton>
 </div>
     </div>
-
+</div>
          
           
     </section>
@@ -221,10 +180,12 @@ console.log(data);
 
   /* Cards layout */
 .singleview{
+  margin-top: 3rem;
   display: flex;
     row-gap: 1rem;
     flex-direction: column;
     align-items: center;
+        row-gap: 2rem;
 }
 
 .singlevcards{
@@ -276,39 +237,25 @@ background: rgba(195, 228, 221, 0.57);
 }
 
 
-/* TEXT */
+/*TEXT STYLEING */
+.text-singlev {
+  max-width: 600px;
+  cursor: pointer; 
+  text-align: justify;
+  display: grid;
+  align-self: start;
+  margin-top: 3rem;
+  
+}
+.dots {
+  color: #555;
+}
 
-
-/* text about the cakes small to big */
 .more-text {
-    display: none; /* Hide extra text by default */
-  }
-
-  .text-singlev:hover .more-text {
-    display: inline; /* Show the hidden text on hover */
-  }
-
-  .text-singlev:hover .dots {
-    display: none; /* Hide the dots on hover */
-  }
-
-  .text-singlev {
-    cursor: pointer; /
-    text-align: justify;   
-  }
+  display: none; 
+}
 
 
-/* BUTTONS STYLING */
-  .btnsinglev1{
-     
-    }
-    .btnsinglev2{
-      border: 3px solid #C3E4DD;
-    }
-
-
-
-    
     /* COUNTER STYLING */
   .counter-button{
 cursor: pointer; 
@@ -322,54 +269,70 @@ display: flex;
 
  .icon-row {
       display: flex;
-      align-items: center;
-      gap: 20px; /* Space between each icon-text pair */
-      justify-content: center; /* Centers the row horizontally */
+      gap: 20px; 
+      
     }
 
     .icon-text {
       display: flex;
       align-items: center;
-      gap: 10px; /* Space between the icon and text */
+      gap: 10px; /* Space between icon and text */
     }
 
     .icon-text img {
       width: 50px; /* Adjust the size of the icon */
       height: 50px;
-      object-fit: cover; /* Ensures the image doesn't stretch */
+      object-fit: cover;
     }
+.btnsinglev{
+  display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+        margin-top: 3rem;
+}
 
     /* ADD ONS STYLING */
 .addons{
   display: flex;
   gap: 2rem;
-  
-}
- 
-    
-
-
-/* FOR JAVASCRIPT TEXT SMALLER AND THE ... AND BIGGER TEXT */
-/* 
-.text-singlev {
-  max-width: 600px;
-  margin: 20px auto;
-  font-family: Arial, sans-serif;
-  cursor: pointer; 
+    margin-top: 3rem;
 }
 
-.text {
-  line-height: 1.6;
-}
+/* DESKTOP STYLEING */
+@media (min-width: 768px) {
+   .singleview {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto); /* Add an extra row for stacking */
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
 
-.dots {
-  color: #555;
-}
+    .titelsinglev {
+      grid-area: 1 / 2 / 2 / 3;
+      align-self: start; 
+    }
+   .singlevcards {
+        grid-area: 1 / 1 / 3 / 2;
+            margin-left: 6rem;
+    }
+     .singleview .text {
+      grid-area: 3 / 1 / 4 / 2;    
+  }
+    .optionsWrapper {
+       grid-area: 2 / 2 / 3 / 3;
+       align-self: start;
+    }
 
-.more-text {
-  display: none; 
-} */
-
+    .extraInformationWrapper {
+        grid-area: 3 / 2 / 4 / 3; 
+        margin-top: 3rem;
+    }
+    .singlevcard{
+      width: 75%;
+    height: 100%;
+    }
+  }
   </style>
     </main>
     <footer>
@@ -380,29 +343,28 @@ display: flex;
 
 //  THE JAVASCRIPT FOR TEXT SMALLER AND THEN BIGGER
 
-// document.getElementById("textSinglev")?.addEventListener("click", function () {
-//   const dots = document.querySelector(".dots") as HTMLElement;
-//   const moreText = document.querySelector(".more-text") as HTMLElement;
+document.getElementById("textSinglev")?.addEventListener("click", function () {
+  const dots = document.querySelector(".dots") as HTMLElement;
+  const moreText = document.querySelector(".more-text") as HTMLElement;
 
-//   if (moreText.style.display === "none" || !moreText.style.display) {
-//     dots.style.display = "none"; // Hide the dots
-//     moreText.style.display = "inline"; // Show the hidden text
-//   } else {
-//     dots.style.display = "inline"; // Show the dots
-//     moreText.style.display = "none"; // Hide the additional text
-//   }
-// }); -->
+  if (moreText.style.display === "none" || !moreText.style.display) {
+    dots.style.display = "none"; // Hiding the dots
+    moreText.style.display = "inline"; // Show the hidden text
+  } else {
+    dots.style.display = "inline"; // Show the dots
+    moreText.style.display = "none"; // Hide the additional text
+  }
+});
 
-
+// JAVASCRIPT FOR COUNTER CONTAINER
     
-  // counter-container JAVASCRIPT
   document.addEventListener("DOMContentLoaded", () => {
-        // Safely get the DOM elements
+        // getting the DOM elements
         const decrementBtn = document.getElementById("decrement");
         const incrementBtn = document.getElementById("increment");
         const counterDisplay = document.getElementById("counter");
 
-        // Check if elements exist to avoid null errors
+        // Checking if elements exist to avoid null errors
         if (decrementBtn && incrementBtn && counterDisplay) {
           let count = 0; // Initialize the counter
 

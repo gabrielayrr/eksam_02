@@ -73,22 +73,18 @@ const data = await fetch(
 
 <style>
  .bryllupcards {
-    display: grid;
-    grid-template-columns: 1fr; /* One column for mobile */
-    gap: 2rem; /* Space between cards */
-    margin: 2rem auto; /* Center the grid container */
-    max-width: 1200px; /* Optional: restrict max width */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     
 }
 
-/* Tablet/desktop screens: Four cards in the first row and one below the first card */
+
 @media (min-width: 768px) {
     .bryllupcards {
         grid-template-columns: repeat(4, 1fr); /* Four equal columns */
         grid-template-rows: auto auto; /* Two rows */
         gap: 3rem; /* Add more space between the cards */
-        justify-content: center; /* Center the grid items horizontally */
-        align-content: center; /* Center the grid items vertically */
         width: 100%; /* Make sure the grid takes up full width */
     }
 }
