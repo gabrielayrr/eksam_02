@@ -1,32 +1,48 @@
 ---
 import Cherrybutton from './Cherrybutton.astro';
 import Kontakt from '../pages/kontakt.astro';
-const {image, title, subtitle , text, sluttext,} = Astro.props;
 ---
 
 
-<section class=card>
-    <img src={image}/>
-    <h2>{title}</h2>
-    <h3>{subtitle}</h3>
-    <p>{text}</p>
-    
+
+
+<section class="title">
+<h2>Leder du efter noget mere personligt?</h2>
 </section>
-<section>
-    <br>
-<p><b>{sluttext}</b></p>
+
+<section class="subtitle">
+<h3>Mangler du kager til en ekstra speciel begivenhed?</h3>
+</section>
+
+<section class="text">
+<p>Hos Bake my Day kan vi lave netop det design, du ønsker, der måske har en særlig betydning for dig. Du kan sende os billeder af dine idéer. Dit valg af bryllupskager, dåbskager, konfirmationskager eller fødselsdagskager er derfor personligt og skræddersyet til dig. Send en besked til os, og vi vender tilbage dig, med et bud på din drømmekage.  
+<br>
+<br>
+<b>Custom kager er til minimum 20 personer. </b></p>
 </section>
 
 <section class=button>
 <Cherrybutton  text="SEND OS EN MAIL"></Cherrybutton>
 </section>
 <section class="spørgsmål">
-
- <h3>
-    Har du generelle spørgsmål til os?
-    <br>
-    Find vores kontakt side <a href="/kontakt">her</a></p></h3>
+ <h3>Har du generelle spørgsmål til os?<br>Find vores kontakt side<a href="/kontakt">her</a></h3>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <style>
@@ -41,7 +57,9 @@ const {image, title, subtitle , text, sluttext,} = Astro.props;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
- 
+ }
+ .card h3{
+  color:black;
  }
 .button{
     position: relative;
@@ -58,13 +76,13 @@ const {image, title, subtitle , text, sluttext,} = Astro.props;
     margin-top: 5rem;
     color: black;
     
-    
+  
 }
 .spørgsmål a{
-    
+  
     color: #99040b;
     text-decoration: underline;
-}
+  }
 
   /* Media Query til mindre skærme */
 @media (max-width: 768px) {
