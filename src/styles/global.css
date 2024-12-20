@@ -94,6 +94,14 @@ a {
     font-size: 20px; /* Adjust heading size */
   }
 
+  h4 {
+    font-size: 18px; /* Adjust heading size */
+  }
+
+  h5 {
+    font-size: 15px; /* Adjust heading size */
+  }
+
   p {
     font-size: 15px; /* Adjust heading size */
   }
