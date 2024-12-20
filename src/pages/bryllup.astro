@@ -6,7 +6,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Kagemenu from "../components/Kagemenu.astro";
 import Bryllupcard from "../components/Bryllupcard.astro";
-import Cherrybutton from "../components/Cherrybutton.astro";
+
 
 const data = await fetch(
   "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
@@ -58,8 +58,9 @@ const data = await fetch(
       <Header />
     </header>
     <main>
-      <Kagemenu />
       <h1>BRYLLUPSKAGER</h1>
+      <Kagemenu />
+      
 
       <section class="bryllupcards">
         {
