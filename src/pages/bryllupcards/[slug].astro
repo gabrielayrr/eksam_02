@@ -1,18 +1,5 @@
 ---
 // @ts-nocheck
-import "../../styles/global.css";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import Kagemenu from "../../components/Kagemenu.astro";
-import Dropdownbutton from "../../components/Dropdownbutton.astro";
-import Cherrybutton from "../../components/Cherrybutton.astro";
-import Addtoorder from "../../components/Addtoorder.astro";
-import Bryllupcard from "../../components/Bryllupcard.astro";
-const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
-const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
-let count = 0;
-
-
 export async function getStaticPaths() {
   const data = await fetch(
     "https://lenxgabyeauokwywovdn.supabase.co/rest/v1/Bryllup",
@@ -32,6 +19,17 @@ export async function getStaticPaths() {
     };
   });
 }
+
+import "../../styles/global.css";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Kagemenu from "../../components/Kagemenu.astro";
+import Dropdownbutton from "../../components/Dropdownbutton.astro";
+const Størrelse = ['Vælg', '30 Pers - 1 Etage', '30 Pers - 2 Etage', '40 Pers - 2 Etage'];
+const Smag = ['Vælg', 'Tripple Chocolate', 'Vanilje Blåbærkage Med Passionscreme', 'Chockoladekage med hindbærcreme'];
+let count = 0;
+import Cherrybutton from "../../components/Cherrybutton.astro";
+import Addtoorder from "../../components/Addtoorder.astro";
 
 const { data } = Astro.props; // FIXED: Changed `myData` to `data`
 console.log(data);
@@ -109,7 +107,9 @@ console.log(data);
   </div>
           <div class="btnsinglev">
           <Cherrybutton class="cherrybutton" text="TILFØJ TIL KURV"></Cherrybutton>
-
+           
+           
+          <Cherrybutton class="cherrybutton" text="KØB"></Cherrybutton>
         
     </div>
 </div>
@@ -120,19 +120,19 @@ console.log(data);
 
 <div class="icon-row">
     <div class="icon-text">
-      <img src="/images/vegan.webp" alt="Icon 1">
+      <img src="../images/vegan.webp" alt="Icon 1">
       <p>Vegan</p>
     </div>
     <div class="icon-text">
-      <img src="/images/egg.webp" alt="Icon 2">
+      <img src="../images/egg.webp" alt="Icon 2">
       <p>Ægg</p>
     </div>
     <div class="icon-text">
-      <img src="/images/milk-bottle.webp" alt="Icon 3">
+      <img src="../images/milk-bottle.webp" alt="Icon 3">
      <p>Mælk</p>
     </div>
     <div class="icon-text">
-      <img src="/images/wheat.webp" alt="Icon 4">
+      <img src="../images/wheat.webp" alt="Icon 4">
       <p>Wheat</p>
 </div>
 </div>
@@ -142,7 +142,7 @@ console.log(data);
 
   <div class="addoncrd" >
     <Addtoorder
-     src="/images/candles.webp"
+     src="../images/candles.webp"
      name="Stearinlys"
     price="25 dkk"
    />
@@ -151,7 +151,7 @@ console.log(data);
 
    <div class="addoncrd">
        <Addtoorder
-     src="/images/cardaddon.webp"
+     src="../images/cardaddon.webp"
      name="Kort"
     price="25 dkk"
     />
@@ -160,7 +160,7 @@ console.log(data);
     
     <div class="addoncrd">
      <Addtoorder
-     src="/images/sprinkles.webp"
+     src="../images/sprinkles.webp"
      name="Sprikles"
     price="30 dkk"
     />  
@@ -337,6 +337,7 @@ display: flex;
       <Footer />
     </footer>
   </body>
+
    <script>
 
 //  THE JAVASCRIPT FOR TEXT SMALLER AND THEN BIGGER
